@@ -22,8 +22,8 @@ public class Crawling
 			e.printStackTrace();
 		}
 		
-		Elements elem = doc.select("dl");
-		for(Element el : elem.select("dl"))
+		Elements elem = doc.select("article > dl");
+		for(Element el : elem.select("dt")) // dd를 넣으면 단축키, dt를 넣으면 단축키 기능
 		{
 			System.out.println(el.text());
 		}
