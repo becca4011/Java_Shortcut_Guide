@@ -3,11 +3,9 @@ package main_page;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import crawling.Crawling;
 
 public class Shortcut_Dictionary extends JFrame
 {
-	Crawling cl = new Crawling();
 	JLabel [] shortcut_lb = new JLabel[10];
 	
 	public Shortcut_Dictionary()
@@ -41,7 +39,7 @@ public class Shortcut_Dictionary extends JFrame
 		public void actionPerformed(ActionEvent e)
 		{
 			JButton b = (JButton)e.getSource();
-			if(cnt <= 2)
+			if(cnt <= 82)
 			{
 				int arr = -1;
 				for(int i = cnt * 10; i < (cnt + 1) * 10; i++)

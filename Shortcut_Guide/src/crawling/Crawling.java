@@ -1,6 +1,11 @@
 package crawling;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,19 +19,14 @@ public class Crawling
 {
 	public static void main(String[] args) 
 	{
-		
-	}
-	public List<Object> shortcut()
-	{
 		String URL = "http://visualstudioshortcuts.com/2013/";
 		Document doc = null;
-		List<Object> sc = new ArrayList<Object>();
-		int cnt = 0;
+		List<String> sc = new ArrayList<String>();
 		
 		try 
 		{
 			doc = Jsoup.connect(URL).get();
-		} 
+		}
 		catch (IOException e) 
 		{
 			e.printStackTrace();
@@ -38,6 +38,24 @@ public class Crawling
 			sc.add(el.text());
 		}
 		
-		return sc; // 총 813개의 단축키가 있음
+		try 
+		{
+		    FileOutputStream fos = new FileOutputStream(new File("shortcut/shortcut.txt"));
+			OutputStreamWriter osw = new OutputStreamWriter(fos);
+			BufferedWriter bw = new BufferedWriter(osw);
+			
+			for(String shortcuts : sc) {
+				bw.write(shortcuts);
+				bw.newLine();
+			}
+			
+			bw.close();
+			osw.close();
+			fos.close();
+		} 
+		catch (Exception e) 
+		{
+			e.getStackTrace();
+		}
 	}
 }
