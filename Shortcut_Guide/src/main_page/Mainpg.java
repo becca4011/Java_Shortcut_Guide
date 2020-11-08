@@ -2,6 +2,7 @@ package main_page;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class Mainpg extends JFrame
 {
@@ -11,10 +12,27 @@ public class Mainpg extends JFrame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		Container c = getContentPane();
-		setLayout(new FlowLayout(FlowLayout.CENTER, 200, 500));
+		setLayout(null);
 		
-		c.add(new JButton("단축키 종류"));
-		c.add(new JButton("단축키 찾기"));
+		JButton dict = new JButton("Dictionary");
+		dict.setSize(200, 40);
+		dict.setFont(new Font("Calibri", Font.PLAIN, 30));
+		dict.setLocation(150, 450);
+		dict.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				new Shortcut_Dictionary();
+				setVisible(false);
+			}
+		});
+		c.add(dict);
+		
+		JButton search = new JButton("Search");
+		search.setSize(200, 40);
+		search.setFont(new Font("Calibri", Font.PLAIN, 30));
+		search.setLocation(700, 450);
+		c.add(search);
 		
 		setSize(1100, 700);
 		setVisible(true);
