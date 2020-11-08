@@ -3,10 +3,14 @@ package main_page;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Shortcut_Dictionary extends JFrame
 {
-	JLabel [] shortcut_lb = new JLabel[10];
+	static List<String> sc = new ArrayList<String>();
+	JLabel shortcut_lb = new JLabel();
 	
 	public Shortcut_Dictionary()
 	{
@@ -16,11 +20,8 @@ public class Shortcut_Dictionary extends JFrame
 		Container c = getContentPane();
 		setLayout(null);
 		
-		for(int i = 0; i < shortcut_lb.length; i++)
-		{
-			shortcut_lb[i] = new JLabel();
-			c.add(shortcut_lb[i]);
-		}
+		shortcut_lb = new JLabel();
+		c.add(shortcut_lb);
 		
 		JButton next_btn = new JButton("Next >");
 		next_btn.setSize(200, 40);
@@ -39,20 +40,18 @@ public class Shortcut_Dictionary extends JFrame
 		public void actionPerformed(ActionEvent e)
 		{
 			JButton b = (JButton)e.getSource();
-			if(cnt <= 82)
+			
+			for(int i = cnt; i < cnt + 1; i++)
 			{
-				int arr = -1;
-				for(int i = cnt * 10; i < (cnt + 1) * 10; i++)
-				{
-					arr++;
-					shortcut_lb[arr].setText((String) cl.shortcut().get(i));
-					shortcut_lb[arr].setSize(300, 30);
-					shortcut_lb[arr].setFont(new Font("Calibri", Font.PLAIN, 30));
-					shortcut_lb[arr].setLocation(10, (arr + 1) * 40);
-				}
-				cnt++;
-				b.setText("Next >");
+				shortcut_lb.setText(sc.get(i));
+				shortcut_lb.setSize(300, 30);
+				shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
+				shortcut_lb.setLocation(10, 40);
 			}
+			cnt++;
+			
+			if(cnt < sc.size())
+				b.setText("Next >");
 			else
 			{
 				cnt = 0;
@@ -63,6 +62,27 @@ public class Shortcut_Dictionary extends JFrame
 	
 	public static void main(String[] args) 
 	{
+		try
+		{
+			File read = new File("shortcut/shortcut.txt");
+			FileReader fr = new FileReader(read);
+			BufferedReader br = new BufferedReader(fr);
+			
+			String s;
+			// 파일에서 한 줄씩 읽어와 list에 저장
+			while((s = br.readLine()) != null)
+			{
+				sc.add(s);
+			}
+			
+			if(fr != null) fr.close();
+			if(br != null) br.close();
+		}
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+		
 		new Shortcut_Dictionary();
 	}
 }
