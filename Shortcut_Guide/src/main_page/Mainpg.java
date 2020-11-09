@@ -35,6 +35,7 @@ public class Mainpg extends JFrame
 		c.add(search);
 		
 		setSize(1100, 700);
+		setResizable(false); // 크기 변경 불가능하도록 함
 		setVisible(true);
 	}
 	

@@ -11,6 +11,7 @@ public class Shortcut_Dictionary extends JFrame
 {
 	static List<String> sc = new ArrayList<String>();
 	JLabel shortcut_lb = new JLabel();
+	private int cnt = 0;
 	
 	public Shortcut_Dictionary()
 	{
@@ -47,20 +48,43 @@ public class Shortcut_Dictionary extends JFrame
 		shortcut_lb.setLocation(10, 40);
 		c.add(shortcut_lb);
 		
+		JButton prev_btn = new JButton("< Prev");
+		prev_btn.setSize(200, 40);
+		prev_btn.setFont(new Font("Calibri", Font.PLAIN, 30));
+		prev_btn.setLocation(150, 450);
+		prev_btn.addActionListener(new PrevBtnAction());
+		c.add(prev_btn);
+		
 		JButton next_btn = new JButton("Next >");
 		next_btn.setSize(200, 40);
 		next_btn.setFont(new Font("Calibri", Font.PLAIN, 30));
-		next_btn.setLocation(10, 450);
+		next_btn.setLocation(700, 450);
 		next_btn.addActionListener(new NextBtnAction());
 		c.add(next_btn);
 		
 		setSize(1100, 700);
+		setResizable(false);
 		setVisible(true);
+	}
+	
+	private class PrevBtnAction implements ActionListener
+	{
+		@Override
+		public void actionPerformed(ActionEvent e)
+		{
+			JButton b = (JButton)e.getSource();
+			
+			for(int i = cnt; i > cnt - 1; i--)
+			{
+				shortcut_lb.setText(sc.get(i));
+			}
+			if(cnt == 0) cnt = sc.size()-1;
+			else cnt--;
+		}
 	}
 	
 	private class NextBtnAction implements ActionListener
 	{
-		int cnt = 0;
 		@Override
 		public void actionPerformed(ActionEvent e)
 		{
@@ -70,15 +94,8 @@ public class Shortcut_Dictionary extends JFrame
 			{
 				shortcut_lb.setText(sc.get(i));
 			}
-			cnt++;
-			
-			if(cnt < sc.size())
-				b.setText("Next >");
-			else
-			{
-				cnt = 0;
-				b.setText("First");
-			}
+			if(cnt==sc.size()-1) cnt = 0;
+			else cnt++;
 		}
 	}
 	
