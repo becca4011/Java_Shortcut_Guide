@@ -78,7 +78,9 @@ public class Shortcut_Dictionary extends JFrame
 			{
 				shortcut_lb.setText(sc.get(i));
 			}
-			if(cnt == 0) cnt = sc.size()-1;
+			
+			// 처음에 prev 버튼을 누르면 가장 마지막 단축키를 보여줌
+			if(cnt == 0) cnt = sc.size() - 1;
 			else cnt--;
 		}
 	}
@@ -94,7 +96,9 @@ public class Shortcut_Dictionary extends JFrame
 			{
 				shortcut_lb.setText(sc.get(i));
 			}
-			if(cnt==sc.size()-1) cnt = 0;
+			
+			// 마지막에 next 버튼을 누르면 가장 처음 단축키를 보여줌
+			if(cnt == sc.size() - 1) cnt = 0;
 			else cnt++;
 		}
 	}
