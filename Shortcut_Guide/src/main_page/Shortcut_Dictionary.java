@@ -42,7 +42,7 @@ public class Shortcut_Dictionary extends JFrame
 		Container c = getContentPane();
 		setLayout(null);
 		
-		shortcut_lb = new JLabel();
+		shortcut_lb = new JLabel(sc.get(0));
 		shortcut_lb.setSize(300, 30);
 		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
 		shortcut_lb.setLocation(10, 40);
@@ -74,14 +74,10 @@ public class Shortcut_Dictionary extends JFrame
 		{
 			JButton b = (JButton)e.getSource();
 			
-			for(int i = cnt; i > cnt - 1; i--)
-			{
-				shortcut_lb.setText(sc.get(i));
-			}
+			if (cnt == 0)
+				cnt = sc.size(); // cnt가 0일 때, 리스트의 크기를 cnt로 함
 			
-			// 처음에 prev 버튼을 누르면 가장 마지막 단축키를 보여줌
-			if(cnt == 0) cnt = sc.size() - 1;
-			else cnt--;
+			shortcut_lb.setText(sc.get(--cnt)); // index가 cnt-1인 단축키를 얻음
 		}
 	}
 	
@@ -92,19 +88,16 @@ public class Shortcut_Dictionary extends JFrame
 		{
 			JButton b = (JButton)e.getSource();
 			
-			for(int i = cnt; i < cnt + 1; i++)
-			{
-				shortcut_lb.setText(sc.get(i));
-			}
+			if (++cnt == sc.size()) // cnt 1 증가
+				cnt = 0; // cnt에 1을 증가시킨 것이 리스트의 크기와 같을 경우 cnt를 0으로 함
 			
-			// 마지막에 next 버튼을 누르면 가장 처음 단축키를 보여줌
-			if(cnt == sc.size() - 1) cnt = 0;
-			else cnt++;
+			shortcut_lb.setText(sc.get(cnt)); // index가 cnt인 단축키를 얻음
+
 		}
 	}
 	
 	public static void main(String[] args) 
 	{
-		
+
 	}
 }

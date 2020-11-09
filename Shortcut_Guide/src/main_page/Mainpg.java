@@ -22,6 +22,7 @@ public class Mainpg extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
+				// Dictionary 버튼을 누르면 Shortcut_Dictionary 프레임으로 넘어가도록 함
 				new Shortcut_Dictionary();
 				setVisible(false);
 			}
