@@ -32,7 +32,7 @@ public class Mainpg extends JFrame
 		JButton search = new JButton("Search");
 		search.setSize(200, 40);
 		search.setFont(new Font("Calibri", Font.PLAIN, 30));
-		search.setLocation(700, 450);
+		search.setLocation(750, 450);
 		c.add(search);
 		
 		setSize(1100, 700);

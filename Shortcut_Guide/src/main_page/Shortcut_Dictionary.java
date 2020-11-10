@@ -11,6 +11,7 @@ public class Shortcut_Dictionary extends JFrame
 {
 	static List<String> sc = new ArrayList<String>();
 	JLabel shortcut_lb = new JLabel();
+	JLabel page_lb = new JLabel();
 	private int cnt = 0;
 	
 	public Shortcut_Dictionary()
@@ -45,8 +46,14 @@ public class Shortcut_Dictionary extends JFrame
 		shortcut_lb = new JLabel(sc.get(0));
 		shortcut_lb.setSize(300, 30);
 		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
-		shortcut_lb.setLocation(10, 40);
+		shortcut_lb.setLocation(10, 70);
 		c.add(shortcut_lb);
+		
+		page_lb = new JLabel(Integer.toString(cnt + 1));
+		page_lb.setSize(50, 30);
+		page_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
+		page_lb.setLocation(10, 30);
+		c.add(page_lb);
 		
 		JButton prev_btn = new JButton("< Prev");
 		prev_btn.setSize(200, 40);
@@ -58,7 +65,7 @@ public class Shortcut_Dictionary extends JFrame
 		JButton next_btn = new JButton("Next >");
 		next_btn.setSize(200, 40);
 		next_btn.setFont(new Font("Calibri", Font.PLAIN, 30));
-		next_btn.setLocation(700, 450);
+		next_btn.setLocation(750, 450);
 		next_btn.addActionListener(new NextBtnAction());
 		c.add(next_btn);
 		
@@ -78,6 +85,7 @@ public class Shortcut_Dictionary extends JFrame
 				cnt = sc.size(); // cnt가 0일 때, 리스트의 크기를 cnt로 함
 			
 			shortcut_lb.setText(sc.get(--cnt)); // index가 cnt-1인 단축키를 얻음
+			page_lb.setText(Integer.toString(cnt + 1));
 		}
 	}
 	
@@ -92,12 +100,12 @@ public class Shortcut_Dictionary extends JFrame
 				cnt = 0; // cnt에 1을 증가시킨 것이 리스트의 크기와 같을 경우 cnt를 0으로 함
 			
 			shortcut_lb.setText(sc.get(cnt)); // index가 cnt인 단축키를 얻음
-
+			page_lb.setText(Integer.toString(cnt + 1));
 		}
 	}
 	
 	public static void main(String[] args) 
 	{
-
+		
 	}
 }
