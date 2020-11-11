@@ -1,813 +1,872 @@
 Shift+Alt+3
+Analyze.NavigateBackward		
 Shift+Alt+4
+Analyze.NavigateForward		
 Ctrl+\, Ctrl+N
-Ins
-B
-I
-O
+Architecture.NewDiagram		
 Ctrl+Shift+K
+편집.폴더의다음책갈피		
 Ctrl+E, C
-Del
-F2
-F12
+Test.CodeCoverageResults		
 Shift+F6
+창.이전분할창		
 Ctrl+Shift+B
-F6
+빌드.솔루션빌드		
 Ctrl+Break
+빌드.취소		
 Ctrl+F7
+빌드.컴파일		
 Alt+F11
+Build.RunCodeAnalysisonSolution		
 Num -
+클래스다이어그램.축소		
 Num +
+클래스다이어그램.확장		
 Alt+Enter
+EditorContextMenus.CodeWindow.ExecuteInInteractive		
 Ctrl+K, Ctrl+G
+OtherContextMenus.HTMLContext.ViewinPageInspector		
 Shift+Alt+U
+SQL.SSDTSchemaCompareWriteUpdates	CommitAllEdits	
 Ctrl+Shift+,
+이미지.축소		
 Ctrl+Shift+.
+View.EdgeLeftMoveRight		
 Ctrl+Shift+Alt+,
+View.EdgeRightMoveLeft		
 Ctrl+Shift+Alt+.
+View.EdgeRightMoveRight		
 Ctrl+Alt+N
+TSqlEditorCloneQuery		
 Shift+Alt+PgDn
+TSqlEditorDatabaseCombo		
 Shift+Alt+PgDn
+ViewFileInScriptPanel		
 Alt+F10
+디버그.코드변경내용적용		
 Ctrl+Alt+V, A
+디버그.자동		
 Ctrl+D, A
-Ctrl+D, Ctrl+A
+SQL.TSqlEditorToggleExecutionPlan					
 Ctrl+Alt+Break
+디버그.모두중단		
 Ctrl+B
-Ctrl+D, N
-Ctrl+D, Ctrl+N
+빌드.선택 영역 빌드(2019),Debug.FunctionBreakpoint(2017),TeamFoundationContextMenus.Commands.GoToBuilds			
 Ctrl+Alt+B
-Ctrl+D, B
-Ctrl+D, Ctrl+B
+디버그.중단점					
 Ctrl+Alt+C
-Ctrl+D, C
-Ctrl+D, Ctrl+C
+디버그.호출스택,OtherContextMenus.UITestEditorContextMenu.Movecode				
 Ctrl+Shift+F9
+Format.CenterHorizontal				
 Alt+F2
+Debug.DiagnosticsHub.Launch		
 Ctrl+Alt+D
+디버그.디스어셈블리	,OtherContextMenus.UITestEditorContextMenu.InsertDelayBefore,View.ReportData
 Ctrl+Alt+V, D
+Debug.DOMExplorer		
 Ctrl+F9
+디버그.중단점설정		
 Ctrl+Alt+E
+디버그.예외		
 Ctrl+D, E
-Ctrl+D, Ctrl+E
+SQL.TSqlEditorShowEstimatedPlan					
 Ctrl+Shift+F11
+Debug.GoToPreviousCallorIntelliTraceEvent		
 Ctrl+F12
+편집.선언으로이동			
 Alt+F5
+Debug.Graphics.StartDiagnostics			
 Shift+Alt+Down Arrow
+Graphics.MovePixelSelectionDown			
 Shift+Alt+Left Arrow
+Graphics.MovePixelSelectionLeft			
 Shift+Alt+Right Arrow
+Graphics.MovePixelSelectionRight			
 Shift+Alt+Up Arrow
+Graphics.MovePixelSelectionUp		
 Shift+Alt+0
+Graphics.ZoomToActualSize			
 Shift+Alt+=
+Graphics.ZoomIn		
 Shift+Alt+-
-Ctrl+Alt+I
-Ctrl+D, I
-Ctrl+D, Ctrl+I
+Graphics.ZoomOut			
+Ctrl+Alt+I	
+디버그.직접실행							
 Ctrl+Alt+Y, T
+Debug.IntelliTraceCalls			
 Ctrl+Alt+Y, F
+Debug.IntelliTraceEvents			
 Ctrl+Alt+V, C
+Debug.JavaScriptConsole			
 Ctrl+Alt+V, L
-Ctrl+D, L
-Ctrl+D, Ctrl+L
+디버그.지역						
 Ctrl+5
+디버그.위치도구모음.프로세스콤보			
 Ctrl+7
+디버그.위치도구모음.스택프레임콤보			
 Ctrl+6
+디버그.위치도구모음.스레드콤보			
 Ctrl+8
+디버그.위치도구모음.현재스레드플래그지정상태표시/숨기기			
 Ctrl+9
+디버그.위치도구모음.플래그가지정된스레드표시/숨기기			
 Ctrl+Alt+M, 1
-Ctrl+D, Y
-Ctrl+D, Ctrl+Y
+디버그.메모리1						
 Ctrl+Alt+M, 2
+디버그.메모리2			
 Ctrl+Alt+M, 3
+디버그.메모리3			
 Ctrl+Alt+M, 4
+디버그.메모리4			
 Ctrl+Alt+U
-Ctrl+D, M
-Ctrl+D, Ctrl+M
+디버그.모듈						
 Ctrl+Shift+D, S
+디버그.병렬스택			
 Ctrl+Shift+D, 1
+Debug.ParallelWatch1			
 Ctrl+Shift+D, 2
+Debug.ParallelWatch2			
 Ctrl+Shift+D, 3
+Debug.ParallelWatch3			
 Ctrl+Shift+D, 4
+Debug.ParallelWatch4			
 Ctrl+Alt+Z
-Ctrl+D, P
-Ctrl+D, Ctrl+P
+디버그.프로세스									
 Shift+F9
+Format.AlignCenters			
 Ctrl+Alt+Q
-Ctrl+D, Q
-Ctrl+D, Ctrl+Q
+디버그.간략한조사식						
 Ctrl+Shift+R
+Format.ResetLayout.All,디버그.Windows응용프로그램새로고침			
 Ctrl+Alt+G
-Ctrl+D, R
-Ctrl+D, Ctrl+R
+디버그.레지스터					
+Ctrl+D, Ctrl+R			
 Ctrl+Shift+F5
+디버그.다시시작			
 Ctrl+F10
+디버그.커서까지실행			
 Ctrl+Shift+F10
+디버그.다음문설정			
 Ctrl+Shift+`
+Debug.ShowCallStackonCodeMap			
 Alt+Num *
-F5
+디버그.다음문표시			
 Alt+F1
+Debug.StartWindowsPhoneApplicationAnalysis			
 Ctrl+F5
-F11
+디버그.디버깅하지않고시작			
 Ctrl+Alt+F11
+디버그.현재프로세스한단계씩코드실행			
 Shift+Alt+F11
-Shift+F11
-Ctrl+Shift+Alt+F11
-F10
+디버그.한단계씩코드실행			
+Shift+F11	
+디버그.프로시저나가기		
+Ctrl+Shift+Alt+F11	
+디버그.현재프로세스프로시저나가기		
 Ctrl+Alt+F10
+디버그.현재프로세스프로시저단위실행			
 Shift+F5
+디버그.디버깅중지			
 Shift+Alt+F2
+Debug.StopPerformanceAnalysis			
 Ctrl+Shift+D, K
-Ctrl+D, K
-Ctrl+D, Ctrl+K
+Debug.Tasks						
 Ctrl+Alt+H
-Ctrl+D, T
-Ctrl+D, Ctrl+T
-F9
+Debug.Threads								
 Ctrl+F11
-Ctrl+D, D
-Ctrl+D, Ctrl+D
+디버그.디스어셈블리설정해제						
 Ctrl+Alt+W, 1
-Ctrl+D, W
-Ctrl+D, Ctrl+W
+디버그.조사식1						
 Ctrl+Alt+W, 2
+디버그.조사식2			
 Ctrl+Alt+W, 3
+디버그.조사식3 			
 Ctrl+Alt+W, 4
+디버그.조사식4			
 Alt+F9, D
+디버거상황에맞는메뉴.중단점창.삭제			
 Alt+F9, A
+디버거상황에맞는메뉴.중단점창.디스어셈블리로이동			
 Alt+F9, S
-Ctrl+0
-F9
-Ctrl+Alt+=
-Ctrl+Alt+-
+디버거상황에맞는메뉴.중단점창.소스코드로이동									
 Ctrl+Alt+F2
-Ctrl+\, Ctrl+Space
-Ctrl+\, Ctrl+1
-Ctrl+\, Ctrl+3
-F8
-Shift+F8
-Ctrl+\, Ctrl+4
-Ctrl+\, Ctrl+2
-Ctrl+\, Ctrl+Tab
-Ctrl+\, Ctrl+Down Arrow
-F5
+DiagnosticsHub.StopCollection									
 Ctrl+B
+빌드.선택 영역 빌드(Visual Studio 2019)			
 Ctrl+Shift+I
-Enter
+편집.역방향증분검색			
 Shift+Enter
-Left Arrow
+편집.구분선			
 Shift+Left Arrow
+편집.왼쪽문자로			
 Shift+Alt+Left Arrow
-Right Arrow
+편집.왼쪽문자까지열확장선택			
 Shift+Right Arrow
+편집.오른쪽문자까지선택			
 Shift+Alt+Right Arrow
+편집.오른쪽문자까지열확장선택			
 Ctrl+T
-Ctrl+B, C
-Ctrl+B, Ctrl+C
+이미지.텍스트도구						
 Ctrl+M, Ctrl+A
+편집.전체개요축소		
 Ctrl+M, Ctrl+S
+편집.현재영역축소			
 Ctrl+M, Ctrl+T
+편집.태그축소			
 Ctrl+M, Ctrl+O
-Ctrl+M, O
+편집.정의부분만보이기					
 Ctrl+K, Ctrl+C
-Ctrl+E, C
+편집.선택영역을주석으로처리						
 Ctrl+E, Ctrl+C
-Ctrl+Space
+WorkflowDesigner.Collapse						
 Alt+Right Arrow
-Ctrl+K, W
+편집.단어자동완성			
+Ctrl+K, W	
+편집.단어자동완성		
 Ctrl+K, Ctrl+W
+편집.단어자동완성			
 Ctrl+C
+편집.복사			
 Ctrl+Ins
+편집.복사			
 Ctrl+Shift+Alt+C
+편집.매개변수팁복사			
 Shift+Alt+C
+Edit.CreateCopyofWorkItem			
 Ctrl+X
+편집.잘라내기			
 Shift+Del
+편집.잘라내기			
 Ctrl+Shift+V
+편집.클립보드링순환			
 Ctrl+Shift+Ins
+편집.클립보드링순환			
 Alt+,
-Del
+편집.필터수준낮춤			
 Ctrl+Del
+편집.삭제			
 Shift+Del
-Bkspce
+편집.삭제			
 Shift+Bkspce
-Shift+Del
+편집.뒤로삭제						
 Ctrl+K, Ctrl+\
-Ctrl+E, \
-Ctrl+E, Ctrl+\
+편집.가로공백삭제									
 Ctrl+End
-End
+편집.문서끝으로			
 Ctrl+Shift+End
-Shift+End
+편집.문서끝까지선택			
+Shift+End		
+편집.줄끝까지선택	
 Ctrl+Home
-Home
+편집.문서시작으로			
 Ctrl+Shift+Home
+편집.문서시작까지선택			
 Shift+Home
-F2
-Ctrl+B, E
-Ctrl+B, Ctrl+E
+편집.줄시작까지선택								
 Ctrl+M, Ctrl+X
+편집.전체개요확장			
 Shift+Alt+B
+편집.기본형식목록확장/축소			
 Ctrl+M, Ctrl+E
+편집.현재영역확장			
 Ctrl+F
-Ctrl+K, R
+편집.찾기						
 Ctrl+K, Ctrl+R
+보기.개체브라우저검색콤보상자로이동			
 Shift+F12
+편집.모든참조찾기			
 Ctrl+Shift+F
-F3
+편집.파일에서찾기			
 Ctrl+F3
+편집.다음찾기선택			
 Shift+F3
+편집.이전찾기			
 Ctrl+Shift+F3
+편집.이전찾기선택			
 Ctrl+K, Ctrl+D
-Ctrl+E, D
-Ctrl+E, Ctrl+D
+편집.문서서식						
 Ctrl+K, Ctrl+F
-Ctrl+E, F
-Ctrl+E, Ctrl+F
-Ctrl+K, M
+편집.선택영역서식								
 Ctrl+K, Ctrl+M
+Edit.GenerateMethod			
 Ctrl+G
+편집.이동			
 Ctrl+]
+이미지.다음색			
 Ctrl+Shift+]
+이미지.다음오른쪽색			
 Ctrl+F12
-F12
-Ctrl+/
-F8
+편집.선언으로이동						
 Shift+F8
+편집.이전위치로이동			
 Ctrl+M, Ctrl+H
+편집.선택영역숨기기			
 Alt+.
+편집.필터수준높임			
 Ctrl+I
+편집.증분검색			
 Shift+Alt+Right Arrow
+편집.다음단어까지열확장선택			
 Ctrl+K, Ctrl+X
-Ctrl+K, X
-Tab
+편집.코드조각삽입			
 Ctrl+L
+편집.줄잘라내기			
 Ctrl+Shift+L
-Down Arrow
+편집.줄삭제			
 Shift+Down Arrow
+편집.한줄아래까지선택			
 Shift+Up Arrow
+편집.모눈위로컨트롤크기조정			
 Shift+Alt+Down Arrow
-End
+편집.한줄아래까지열확장선택			
 Shift+End
+편집.줄끝까지선택			
 Shift+Alt+End
+편집.줄끝까지열확장선택			
 Ctrl+Enter
+편집.위쪽줄열기			
 Ctrl+Shift+Enter
-Home
+편집.아래쪽줄열기			
 Shift+Home
+편집.줄시작까지선택			
 Shift+Alt+Home
+편집.줄시작까지열확장선택			
 Shift+Alt+T
-Up Arrow
+편집.줄바꾸기			
 Shift+Up Arrow
+편집.한줄위까지선택			
 Shift+Down Arrow
+편집.한줄아래까지선택			
 Shift+Alt+Up Arrow
+편집.한줄아래까지열확장선택			
 Ctrl+J
+편집.멤버목록			
 Ctrl+K, L
+편집.멤버목록			
 Ctrl+K, Ctrl+L
+편집.멤버목록			
 Ctrl+U
+서식.밑줄			
 Ctrl+Shift+U
+편집.대문자로			
 Ctrl+Down Arrow
-Down Arrow
-Down Arrow
+편집.컨트롤아래로이동			
 Ctrl+Left Arrow
-Left Arrow
-Left Arrow
+편집.컨트롤왼쪽으로이동			
 Ctrl+Right Arrow
-Right Arrow
-Right Arrow
+편집.컨트롤오른쪽으로이동			
 Ctrl+Up Arrow
-Up Arrow
-Up Arrow
+편집.컨트롤위로이동			
 Alt+Down Arrow
+Edit.MoveSelectedLinesDown			
 Alt+Up Arrow
+Edit.MoveSelectedLinesUp			
 Ctrl+,
+Edit.GotoAll			
 Shift+Alt+L
-Ins
-Ins
+편집.롤리팝탐색			
 Ctrl+K, Ctrl+N
-Ctrl+B, N
-Ctrl+B, Ctrl+N
+편집.다음책갈피			
 Ctrl+Shift+Down Arrow
+편집.아래로컨트롤크기조정			
 Ctrl+W
+편집.현재단어선택			
 Ctrl+Shift+G
+Edit.OpenFile			
 Shift+Alt+Left Arrow
-Ins
-PgDn
+편집.왼쪽문자까지열확장선택			
 Shift+PgDn
-PgUp
+편집.한페이지아래까지선택			
 Shift+PgUp
+편집.한페이지위까지선택			
 Ctrl+Shift+Space
+편집.매개변수정보			
 Ctrl+K, P
+편집.매개변수정보			
 Ctrl+K, Ctrl+P
+편집.매개변수정보			
 Ctrl+V
+편집.붙여넣기			
 Shift+Ins
+편집.붙여넣기			
 Ctrl+Shift+Alt+P
+편집.매개변수팁붙여넣기			
 Ctrl+Alt+-
+Edit.PeekBackward			
 Alt+F12
+Edit.PeekDefinition			
 Ctrl+Alt+=
+Edit.PeekForward			
 Ctrl+K, Ctrl+P
-Ctrl+B, P
-Ctrl+B, Ctrl+P
+편집.이전책갈피									
 Ctrl+Shift+Up Arrow
+편집.위로컨트롤크기조정			
 Shift+Alt+F12
+편집.빠른기호찾기			
 Ctrl+K, Ctrl+I
+편집.요약정보			
 Ctrl+K, I
+편집.요약정보			
 Ctrl+Y
+편집.다시실행			
 Ctrl+Shift+Z
+편집.다시실행			
 Shift+Alt+Bkspce
+편집.다시실행			
 Ctrl+Shift+J
-F5
-Del
-Del
+Edit.RefreshRemoteReferences			
 Ctrl+Del
+편집.삭제			
 Ctrl+H
+이미지.좌우대칭			
 Ctrl+Shift+H
+이미지.90도회전			
 Ctrl+Shift+I
+편집.역방향증분검색			
 Ctrl+Left Arrow
+편집.컨트롤왼쪽으로이동			
 Ctrl+Right Arrow
+편집.다음단어로			
 Ctrl+Down Arrow
+편집.아래로줄스크롤			
 Ctrl+Up Arrow
+편집.위로줄스크롤			
 Ctrl+A
+편집.모두선택			
 Ctrl+Shift+W
-Esc
-Tab
+파일.브라우저에서보기			
 Shift+Tab
+편집.왼쪽으로탭이동			
 Ctrl+=
+편집.이전위치까지선택			
 Alt+`
-Enter
+Edit.ShowNavigateMenu			
 Ctrl+Shift+Down Arrow
+편집.아래로컨트롤크기조정			
 Shift+Down Arrow
-Shift+Down Arrow
+편집.모눈아래로컨트롤크기조정			
 Ctrl+Shift+Left Arrow
+편집.왼쪽으로컨트롤크기조정			
 Shift+Left Arrow
-Shift+Left Arrow
+편집.모눈왼쪽으로컨트롤크기조정					
 Ctrl+Shift+Right Arrow
+편집.오른쪽으로컨트롤크기조정					
 Shift+Right Arrow
-Shift+Right Arrow
+편집.모눈오른쪽으로컨트롤크기조정			
 Ctrl+Shift+Up Arrow
+편집.위로컨트롤크기조정						
 Shift+Up Arrow
-Shift+Up Arrow
+편집.모눈위로컨트롤크기조정			
 Ctrl+M, Ctrl+U
+편집.현재숨기기중지			
 Ctrl+M, Ctrl+P
-Ctrl+M, P
-Alt+F3, S
+편집.개요표시중지			
+Alt+F3, S	
+편집.검색중지		
 Ctrl+K, Ctrl+S
-Ctrl+K, S
+편집.코드감싸기					
 Ctrl+K, Ctrl+A
-Ctrl+E, A
-Ctrl+E, Ctrl+A
+편집.앵커바꾸기						
 Shift+Tab
+편집.이전컨트롤선택			
 Ctrl+M, Ctrl+L
-Ctrl+M, L
+편집.전체개요표시숨기기					
 Ctrl+K, Ctrl+K
-Ctrl+B, T
-Ctrl+B, Ctrl+T
+편집.책갈피설정해제						
 Ctrl+Alt+Space
+편집.완료모드설정/해제			
 Ctrl+M, Ctrl+M
-Ctrl+M, M
+편집.개요확장축소						
 Ctrl+K, Ctrl+H
+편집.작업목록바로가기설정해제			
 Ctrl+E, T
-Ctrl+E, Ctrl+T
+TestExplorer.ShowTestExplorer						
 Ctrl+E, Ctrl+W
-Ctrl+E, W
+편집.자동줄바꿈설정해제						
 Ctrl+K, Ctrl+U
-Ctrl+E, U
-Ctrl+E, Ctrl+U
+편집.선택영역의주석처리제거								
 Ctrl+Z
+편집.실행취소			
 Alt+Bkspce
+편집.실행취소			
 Ctrl+PgDn
+창.다음탭			
 Ctrl+Shift+PgDn
+편집.뷰맨아래까지선택			
 Ctrl+PgUp
+편집.뷰맨위로			
 Ctrl+Shift+PgUp
+편집.뷰맨위까지선택			
 Ctrl+R, Ctrl+W
+편집.공백보기			
 Ctrl+E, S
+WorkflowDesigner.ToggleSelection			
 Ctrl+E, Ctrl+S
+WorkflowDesigner.ToggleSelection			
 Ctrl+Del
+편집.끝까지단어삭제		
 Ctrl+Bkspce
+편집.시작까지단어삭제			
 Ctrl+Right Arrow
+편집.다음단어로			
 Ctrl+Shift+Right Arrow
+편집.다음단어까지선택			
 Ctrl+Shift+Alt+Right Arrow
+편집.다음단어까지열확장선택			
 Ctrl+Left Arrow
+편집.이전단어로			
 Ctrl+Shift+Left Arrow
+편집.이전단어까지선택			
 Ctrl+Shift+Alt+Left Arrow
+편집.이전단어까지열확장선택			
 Ctrl+Shift+T
+편집.단어바꾸기			
 Ctrl+Shift+K
-Alt+F9, L
-Ctrl+`
+편집.폴더의다음책갈피			
 Ctrl+Shift+P
-Ctrl+Alt+F5
-Alt+Enter
-Alt+'
-Ctrl+M, Ctrl+G
-Ctrl+K, Ctrl+O
-Ctrl+K, Ctrl+T
-Ctrl+K, T
+편집.폴더의이전책갈피																
 Alt+F4
+File.Exit			
 Ctrl+N
+파일.새파일			
 Ctrl+Shift+N
+파일.새프로젝트			
 Shift+Alt+N
+파일.새웹사이트			
 Ctrl+O
+파일.파일열기 			
 Ctrl+Shift+O
+파일.프로젝트열기				
 Shift+Alt+O
+파일.웹사이트열기			
 Ctrl+P
-F2
+파일.인쇄			
 Ctrl+Shift+S
+파일.모두저장			
 Ctrl+S
+파일.선택한항목저장			
 Ctrl+Shift+Down Arrow
-Shift+F9
+편집.아래로컨트롤크기조정			
+Shift+F9	
+디버그.간략한조사식		
 Ctrl+Shift+Left Arrow
-F9
+편집.왼쪽으로컨트롤크기조정			
 Ctrl+Shift+Right Arrow
+편집.오른쪽으로컨트롤크기조정			
 Ctrl+Shift+Up Arrow
+편집.위로컨트롤크기조정						
 Ctrl+B
-Ctrl+B
+이미지.브러시도구			
 Ctrl+R
+보기.개체브라우저검색콤보상자로이동			
 Ctrl+Shift+F9
+디버그.모든중단점삭제			
 Ctrl+F9
-Ctrl+M
+디버그.중단점설정						
 Ctrl+L
-F2
+편집.줄잘라내기			
 Ctrl+Shift+L
+편집.줄삭제			
 Ctrl+I
+서식.기울임꼴
 Ctrl+Shift+R
+Format.ResetLayout.All
 Shift+F7
-Alt+Right Arrow
-Alt+Left Arrow
-Alt+Up Arrow
-Alt+Down Arrow
+보기.디자이너보기
 Ctrl+D
+보기.코드정의창
 Ctrl+T
+보기.작업목록
 Ctrl+G
+편집.이동
 Ctrl+U
+서식.밑줄
 Alt+Up Arrow
+위로이동
 Alt+Right Arrow
+오른쪽이동
 Alt+Left Arrow
+왼쪽이동
 Alt+Down Arrow
+아래로
 Ctrl+Alt+F1
+디버그.현재프로세스한단계씩코드실행
 Ctrl+F1, M
-Ctrl+F1, Ctrl+M
-F1
-Ctrl+F1, V
+도움말.도움말보기
 Ctrl+F1, Ctrl+V
+도움창 보기
 Shift+F1
+도움말.창도움말
 Ctrl+A
+편집.모두선택
 Ctrl+B
+Format.ButtonBottom
 Ctrl+Shift+U
+편집.대문자로
 Ctrl+J
+편집.멤버목록
 Alt+P
+이미지.타원도구
 Ctrl+Shift+I
+이미지.지우기도구
 Ctrl+Shift+Alt+P
+이미지.채워진타원도구윤곽선없음
 Ctrl+Shift+Alt+R
+이미지.채워진사각형도구윤곽선없음
 Ctrl+Shift+Alt+W
+이미지.모퉁이가둥근채워진사각형도구
 Ctrl+F
+찾기
 Ctrl+H
+이미지.좌우대칭
 Shift+Alt+H
+이미지.상하대칭
 Ctrl+=
+이미지.더큰브러쉬
 Ctrl+L
+이미지.선도구
 Ctrl+M
+이미지.확대도구
 Ctrl+Shift+M
-Ins
-Ctrl+]
+이미지.확대
 Ctrl+Right Arrow
-Ctrl+Shift+]
+다음컬러
 Ctrl+Shift+Right Arrow
+다음컬러로 이동
 Shift+Alt+P
+이미지.채워진타원도구
 Shift+Alt+R
+이미지.채워진사각형
 Shift+Alt+W
+이미지.모퉁이가 둥근채워진사각형
 Ctrl+I
-Ctrl+[
+이미지.연필도구
 Ctrl+Left Arrow
-Ctrl+Shift+[
+이전 컬러로 돌아가기
 Ctrl+Shift+Left Arrow
+이전 컬러로 돌아가기
 Shift+Alt+S
+이미지.사각형선택도구
 Alt+R
+이미지.사각형도구
 Ctrl+Shift+H
+편집.파일에서 바꾸기
 Alt+W
+둥근 사각형 툴
 Ctrl+Alt+S
+Grid 나타내기
 Ctrl+Shift+Alt+S
+Tile Grid 나타내기
 Ctrl+.
+Small Brush
 Ctrl+-
+Smaller Brush
 Ctrl+T
+Cancel Retrieving Data
 Ctrl+U
+Use Selectionas Brush
 Ctrl+Shift+.
+줌인
 Ctrl+Up Arrow
+줌인
 Ctrl+Shift+,
+줌아웃
 Ctrl+Down Arrow
+줌아웃
 Ctrl+R, Q
-Ins
+Jump To Counter Pane
 Ctrl+L
-Ctrl+Break
-Del
+Line cut
 Ctrl+M, Ctrl+G
+컨트롤러로 이동
 Ctrl+K, Ctrl+G
-Ins
-Alt+Down Arrow
-Alt+PgDn
-Alt+End
-Alt+Home
-Alt+Up Arrow
-Alt+PgUp
-Ctrl+R, R
+ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector
 Shift+Del
-Ctrl+1
+삭제
 Ctrl+C
-Ctrl+Alt+D
+복사
 Shift+Alt+L
+TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI
 Ctrl+Shift+L
+서식.책갈피삽입
 Ctrl+Alt+C
+OtherContextMenus.UITestEditorContextMenu.Movecode
 Ctrl+Shift+T
-F12
-Shift+Alt+C
-Ctrl+M, Ctrl+C
+OtherContextMenus.UITestEditorContextMenu.Splitintoanewmethod
 Shift+Alt+A
+기존 항목 추가
 Ctrl+Shift+A
+새 항목 추가
 Ctrl+Shift+X
-Ctrl+Alt+Ins
-Alt+;, Alt+C
-Alt+;, Alt+P
-Alt+;, Alt+R
+클래스 마법사 
 Alt+Down Arrow
+아래로 이동
 Alt+Up Arrow
-Ctrl+T
-Ctrl+2
-Ctrl+1
-Ctrl+R
-Ctrl+G
-Ctrl+Shift+J
-Ctrl+4
-Ctrl+3
-Ctrl+R, Ctrl+E
-Ctrl+R, E
-Ctrl+R, Ctrl+I
-Ctrl+R, I
-Ctrl+R, Ctrl+M
-Ctrl+R, M
-Ctrl+R, Ctrl+V
-Ctrl+R, V
-Ctrl+R, Ctrl+R
-Ctrl+R, R
-F2
-Ctrl+R, Ctrl+O
-Ctrl+R, O
-Ctrl+4
-Ctrl+5
-Ctrl+3
-Ctrl+2
-Ctrl+6
-Ctrl+1
+위로 이동
 Ctrl+[, O
+파일 열기 필터
 Ctrl+[, Ctrl+O
+파일 열기 필터
 Ctrl+[, P
+보류 중인 변경 내용 필터
 Ctrl+[, Ctrl+P
+보류 중인 변경 내용 필터
 Ctrl+[, S
+활성 문서 동기화
 Ctrl+[, Ctrl+S
-Alt+F5
-Ctrl+R, E
-Ctrl+R, Ctrl+E
-Ctrl+R, Q
-Ctrl+R, Ctrl+Q
-Ctrl+R, M
-Ctrl+R, Ctrl+M
-Alt+End
-Shift+Alt+R
-Alt+Break
-Ctrl+R, R
-F2
-Ctrl+R, Ctrl+R
-Shift+Alt+C
-Shift+Alt+G
-Shift+Alt+.
-Shift+Alt+,
-Alt+Break
-Shift+Alt+U
-Alt+Break
-Ctrl+Shift+E
-Ctrl+D, F
-Ctrl+D, G
-Ctrl+D, T
-Ctrl+D, E
-Ctrl+D, A
-Ctrl+D, R
-Ctrl+Alt+Left Arrow
-Ctrl+Alt+Right Arrow
-Ctrl+Alt+Up Arrow
-Ctrl+Alt+Down Arrow
-Ctrl+0, Ctrl+N
-Ctrl+0, N
-Ctrl+0, Ctrl+G
-Ctrl+0, G
-Ctrl+0, Ctrl+O
-Ctrl+0, O
+활성 문서 동기화
 Shift+Alt+N
-Shift+Alt+P
-Shift+Alt+L
-F5
+새 웹사이트
 Ctrl+'
-Alt+PgDn
-Alt+PgUp
+팀 탐색기-설정
 Ctrl+0, Ctrl+B
+팀 탐색기-빌드
 Ctrl+0, B
+팀 탐색기-빌드
 Ctrl+0, Ctrl+C
+팀 탐색기-연결
 Ctrl+0, C
-Ctrl+0, Ctrl+D
-Ctrl+0, D
+팀 탐색기-연결
 Ctrl+0, Ctrl+H
+팀 탐색기-홈
 Ctrl+0, H
-Ctrl+0, Ctrl+M
-Ctrl+0, M
+팀 탐색기-홈
 Ctrl+0, Ctrl+P
+팀 탐색기-보류 중인 변경 내용
 Ctrl+0, P
-Ctrl+0, Ctrl+R
-Ctrl+0, R
+팀 탐색기-보류 중인 변경 내용
 Ctrl+0, Ctrl+S
+팀 탐색기-설정
 Ctrl+0, S
-Alt+Home
-Alt+Down Arrow
-Alt+0
-Alt+Up Arrow
-Alt+1
-Alt+2
-Alt+3
-Alt+4
-Alt+5
-Alt+6
-Alt+7
-Alt+8
-Alt+9
-Ctrl+0, Ctrl+A
-Ctrl+0, A
-Ctrl+0, Ctrl+W
-Ctrl+0, W
-Alt+Left Arrow
-Alt+Right Arrow
-Alt+1
-Alt+2
-Alt+3
-Shift+Alt+C
-Shift+Alt+L
-Ctrl+\, Ctrl+C
-Ctrl+\, Ctrl+A
+팀 탐색기-설정
 Ctrl+R, Ctrl+A
+debug all
 Ctrl+R, Ctrl+T
-F12
+테스트 디버깅
 Ctrl+R, L
+최근 실행 반복
 Ctrl+R, A
+모든 테스트 실행
 Ctrl+R, T
+테스트 실행
 Ctrl+Alt+P
+창, 다음탭
+프로세스에 연결
 Ctrl+K, Ctrl+B
-Ctrl+Shift+Alt+F12, Ctrl+Shift+Alt+F12
+코드 조각 관리자
 Shift+Alt+M
+View.AllWindows
 Ctrl+\, Ctrl+R
+View.ArchitectureExplorer
 Ctrl+Shift+N
-Alt+Left Arrow
-Ctrl+K, Ctrl+W
+편집. 폴더의다음책갈피
 Ctrl+W, B
+윈도우 북마크
 Ctrl+W, Ctrl+B
-Ctrl+Shift+1
-Ctrl+Shift+2
+윈도우 북마크
 Ctrl+W, K
+계층 구조 호출
 Ctrl+W, Ctrl+K
-Ctrl+Shift+C
-Ctrl+W, C
+계층 구조 호출
 Ctrl+W, Ctrl+C
+클래스뷰
 Ctrl+K, Ctrl+V
-Ctrl+\, D
-Ctrl+\, Ctrl+D
+보기,클래스뷰검색콤보상자로이동
 Ctrl+W, D
+코드 정의창
 Ctrl+W, Ctrl+D
-Ctrl+Alt+A
+코드 정의창
 Ctrl+W, A
+윈도우 커맨드
 Ctrl+W, Ctrl+A
+윈도우 커맨드
 Shift+Alt+D
-Ctrl+Alt+T
+데이터 소스
 Ctrl+W, U
+문서 개요
 Ctrl+W, Ctrl+U
-F2
+문서 개요
 Ctrl+M, Ctrl+M
-Ctrl+1
-Ctrl+2
-Ctrl+\, E
-Ctrl+\, Ctrl+E
+보기, 마스터편집
 Ctrl+W, E
+에러 리스트
 Ctrl+W, Ctrl+E
-Ctrl+Alt+F
-Ctrl+Alt+F12
-Ctrl+W, Q
+에러 리스트
 Ctrl+W, Ctrl+Q
-Alt+Right Arrow
+Find Symbol Results
 Ctrl+Shift+7
+보기.정방향검색컨텍스트
 Shift+Alt+Enter
+전체화면
 Ctrl+-
+탐색(뒤로)
 Ctrl+Shift+-
+탐색(맨 앞으로)
 Ctrl+Shift+F12
+다음 에러
 Ctrl+PgDn
+다음 화면
 Ctrl+W, N
+Notifications
 Ctrl+W, Ctrl+N
-Ctrl+Alt+J
+Notifications
 Ctrl+W, J
+오브젝트 브라우저
 Ctrl+W, Ctrl+J
+오브젝트 브라우저
 Ctrl+Alt+O
-Ctrl+W, O
+출력
 Ctrl+W, Ctrl+O
-Ctrl+W, G
+출력
 Ctrl+W, Ctrl+G
-Ctrl+Shift+8
-F4
-Ctrl+W, P
+지연된 체크인 확인
+Ctrl+Shft+8
+View.PopBrowseContext
 Ctrl+W, Ctrl+P
+속성창
 Shift+F4
-F5
+속성페이지
 Ctrl+Alt+D
-Ctrl+Shift+E
+역어셈블러
 Ctrl+W, R
+리소스 뷰
 Ctrl+W, Ctrl+R
+리소스 뷰
 Ctrl+Alt+S
+보기.서버탐색기
 Ctrl+W, L
+서버 탐색기
 Ctrl+W, Ctrl+L
-Shift+Alt+F10
+서버 탐색기
 Ctrl+.
+이미지.작은브러시
 Ctrl+Alt+L
+보기. 솔루션탐색기
 Ctrl+W, S
+솔루션탐색기
 Ctrl+W, Ctrl+S
-Ctrl+\, Ctrl+S
+솔루션 탐색기
 Ctrl+Shift+Y
+View.SynchronizeViews
 Ctrl+\, T
+보기.작업목록
 Ctrl+\, Ctrl+T
+보기.작업목록
 Ctrl+W, T
-Ctrl+W, Ctrl+T
+보기.작업목록
 Ctrl+\, Ctrl+M
+View.TfsTeamExplorer
 Ctrl+Alt+X
+보기.도구상자
 Ctrl+W, X
-Ctrl+W, Ctrl+X
+도구상자
 Ctrl+\, Ctrl+U
-Enter
-F7
+View.UMLModelExplorer
 Shift+F7
-Shift+F7
+보기.디자이너보기
 Ctrl+Alt+R
-Ctrl+W, W
-Ctrl+W, Ctrl+W
+보기.웹브라우저
 Ctrl+Shift+.
+View.ZoomIn
 Ctrl+Shift+,
-Esc
-Ctrl+Q
-Ctrl+Shift+Q
-Ctrl+;
-Alt+`
-Ctrl+Shift+Alt+Space
-Ctrl+F4
-Shift+Esc
-Ctrl+Alt+Home
-Ctrl+F2
-Ctrl+F6
-Ctrl+Tab
-Alt+F6
-Ctrl+Alt+PgDn
-Ctrl+PgDn
-Ctrl+Shift+Alt+PgDn
-Alt+F7
-Ctrl+Shift+F6
-Ctrl+Shift+Tab
-Shift+Alt+F6
-Ctrl+Alt+PgUp
-Ctrl+PgUp
-Ctrl+Shift+Alt+PgUp
-Shift+Alt+F7
-Alt+-
-Ctrl+Alt+Down Arrow
-Shift+Alt+V
-Ctrl+Num *, Ctrl+R
-Ctrl+Num *, Ctrl+D
-Ctrl+E, Ctrl+C
-Ctrl+E, C
-Ctrl+E, Ctrl+Y
-Ctrl+E, Y
-Ctrl+E, Ctrl+F
-Ctrl+E, F
-Ctrl+E, Ctrl+N
-Ctrl+E, N
-Ctrl+E, Ctrl+X
-Ctrl+E, X
-Ctrl+E, Ctrl+E
-Ctrl+E, E
-Ctrl+E, Ctrl+P
-Ctrl+E, P
-Ctrl+E, Ctrl+M
-Ctrl+E, M
-Ctrl+Alt+F6
-Ctrl+E, Ctrl+R
-Ctrl+E, R
-Ctrl+E, Ctrl+A
-Ctrl+E, A
-Ctrl+E, Ctrl+I
-Ctrl+E, I
-Ctrl+E, Ctrl+O
-Ctrl+E, O
-Ctrl+E, Ctrl+V
-Ctrl+E, V
-Ctrl+E, Ctrl+S
-Ctrl+E, S
-Ctrl+Num +
-Ctrl+Num -
-Alt+F5
-Ctrl+Alt+F5
-Ctrl+2
-Ctrl+3
-Ctrl+1
+View.Zoomout

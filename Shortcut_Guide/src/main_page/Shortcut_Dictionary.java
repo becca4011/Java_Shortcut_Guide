@@ -11,6 +11,7 @@ public class Shortcut_Dictionary extends JFrame
 {
 	static List<String> sc = new ArrayList<String>();
 	JLabel shortcut_lb = new JLabel();
+	JLabel explain_lb = new JLabel();
 	JLabel page_lb = new JLabel();
 	private int cnt = 0;
 	
@@ -23,7 +24,7 @@ public class Shortcut_Dictionary extends JFrame
 			BufferedReader br = new BufferedReader(fr);
 			
 			String s;
-			// ÆÄÀÏ¿¡¼­ ÇÑ ÁÙ¾¿ ÀĞ¾î¿Í list¿¡ ÀúÀå
+			// íŒŒì¼ì—ì„œ í•œ ì¤„ì”© ì½ì–´ì™€ listì— ì €ì¥
 			while((s = br.readLine()) != null)
 			{
 				sc.add(s);
@@ -43,17 +44,23 @@ public class Shortcut_Dictionary extends JFrame
 		Container c = getContentPane();
 		setLayout(null);
 		
-		shortcut_lb = new JLabel(sc.get(0));
-		shortcut_lb.setSize(300, 30);
-		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
-		shortcut_lb.setLocation(10, 70);
-		c.add(shortcut_lb);
-		
 		page_lb = new JLabel(Integer.toString(cnt + 1));
 		page_lb.setSize(50, 30);
 		page_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
 		page_lb.setLocation(10, 30);
 		c.add(page_lb);
+		
+		shortcut_lb = new JLabel(sc.get(0));
+		shortcut_lb.setSize(1000, 50);
+		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 50));
+		shortcut_lb.setLocation(10, 70);
+		c.add(shortcut_lb);
+		
+		explain_lb = new JLabel(sc.get(1));
+		explain_lb.setSize(1000, 100);
+		explain_lb.setFont(new Font("ë‚˜ëˆ”ë°”ë¥¸ê³ ë”•", Font.PLAIN, 30));
+		explain_lb.setLocation(10, 100);
+		c.add(explain_lb);
 		
 		JButton prev_btn = new JButton("< Prev");
 		prev_btn.setSize(200, 40);
@@ -82,9 +89,10 @@ public class Shortcut_Dictionary extends JFrame
 			JButton b = (JButton)e.getSource();
 			
 			if (cnt == 0)
-				cnt = sc.size(); // cnt°¡ 0ÀÏ ¶§, ¸®½ºÆ®ÀÇ Å©±â¸¦ cnt·Î ÇÔ
+				cnt = sc.size(); // cntê°€ 0ì¼ ë•Œ, ë¦¬ìŠ¤íŠ¸ì˜ í¬ê¸°ë¥¼ cntë¡œ í•¨
 			
-			shortcut_lb.setText(sc.get(--cnt)); // index°¡ cnt-1ÀÎ ´ÜÃàÅ°¸¦ ¾òÀ½
+			explain_lb.setText(sc.get(--cnt)); // ê¸°ëŠ¥ 
+			shortcut_lb.setText(sc.get(--cnt)); // ë‹¨ì¶•í‚¤
 			page_lb.setText(Integer.toString(cnt + 1));
 		}
 	}
@@ -96,16 +104,17 @@ public class Shortcut_Dictionary extends JFrame
 		{
 			JButton b = (JButton)e.getSource();
 			
-			if (++cnt == sc.size()) // cnt 1 Áõ°¡
-				cnt = 0; // cnt¿¡ 1À» Áõ°¡½ÃÅ² °ÍÀÌ ¸®½ºÆ®ÀÇ Å©±â¿Í °°À» °æ¿ì cnt¸¦ 0À¸·Î ÇÔ
+			if (cnt == sc.size() - 1)
+				cnt = 0; // cntì— 1ì„ ì¦ê°€ì‹œí‚¨ ê²ƒì´ ë¦¬ìŠ¤íŠ¸ì˜ í¬ê¸°ì™€ ê°™ì„ ê²½ìš° cntë¥¼ 0ìœ¼ë¡œ í•¨
 			
-			shortcut_lb.setText(sc.get(cnt)); // index°¡ cntÀÎ ´ÜÃàÅ°¸¦ ¾òÀ½
+			explain_lb.setText(sc.get(++cnt)); // ê¸°ëŠ¥(ìˆ˜ì •í•´ì•¼ í•¨)
+			shortcut_lb.setText(sc.get(++cnt)); // ë‹¨ì¶•í‚¤
 			page_lb.setText(Integer.toString(cnt + 1));
 		}
 	}
 	
 	public static void main(String[] args) 
 	{
-		
+		new Shortcut_Dictionary();
 	}
 }

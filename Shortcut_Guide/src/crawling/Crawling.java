@@ -17,11 +17,11 @@ public class Crawling
 	{
 		try 
 		{
-			// Å©·Ñ¸µ
+			// í¬ë¡¤ë§
 			String URL = "http://visualstudioshortcuts.com/2013/";
 			Document doc = null;
 			
-			// ÆÄÀÏÀÔÃâ·Â
+			// íŒŒì¼ì…ì¶œë ¥
 			FileOutputStream fos = new FileOutputStream(new File("shortcut/shortcut.txt"));
 			OutputStreamWriter osw = new OutputStreamWriter(fos);
 			BufferedWriter bw = new BufferedWriter(osw);
@@ -36,9 +36,9 @@ public class Crawling
 			}
 			
 			Elements elem = doc.select("dl");
-			for(Element el : elem.select("dd")) // dd¸¦ ³ÖÀ¸¸é ´ÜÃàÅ°, dt¸¦ ³ÖÀ¸¸é ´ÜÃàÅ° ±â´É
+			for(Element el : elem.select("dd")) // ddë¥¼ ë„£ìœ¼ë©´ ë‹¨ì¶•í‚¤, dtë¥¼ ë„£ìœ¼ë©´ ë‹¨ì¶•í‚¤ ê¸°ëŠ¥
 			{
-				bw.write(el.text()); // shortcut.txt ÆÄÀÏ¿¡ Å©·Ñ¸µÇÑ ´ÜÃàÅ°¸¦ ³ÖÀ½
+				bw.write(el.text()); // shortcut.txt íŒŒì¼ì— í¬ë¡¤ë§í•œ ë‹¨ì¶•í‚¤ë¥¼ ë„£ìŒ
 				bw.newLine();
 			}
 			

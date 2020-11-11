@@ -14,6 +14,12 @@ public class Mainpg extends JFrame
 		Container c = getContentPane();
 		setLayout(null);
 		
+		JLabel logo = new JLabel("Shortcut Guide");
+		logo.setSize(800, 200);
+		logo.setFont(new Font("Calibri", Font.PLAIN, 100));
+		logo.setLocation(240, 120);
+		c.add(logo);
+		
 		JButton dict = new JButton("Dictionary");
 		dict.setSize(200, 40);
 		dict.setFont(new Font("Calibri", Font.PLAIN, 30));
