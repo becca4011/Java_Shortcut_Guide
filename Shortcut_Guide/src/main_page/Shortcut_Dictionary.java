@@ -17,6 +17,8 @@ public class Shortcut_Dictionary extends JFrame
 	private int cnt = 0;
 	private int pageCnt = 1;
 	
+	ImageIcon sc_bg, sc_prev, sc_prevroll, sc_next, sc_nextroll;
+	
 	public Shortcut_Dictionary()
 	{
 		try
@@ -45,41 +47,73 @@ public class Shortcut_Dictionary extends JFrame
 		setTitle("Shortcut Dictionary");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		Container c = getContentPane();
-		setLayout(null);
+		sc_bg = new ImageIcon("image/shortcut_background.png");
+		
+		JPanel background = new JPanel() 
+        {
+            public void paintComponent(Graphics g) 
+            {
+                g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
+                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
+                super.paintComponent(g);
+            }
+        };
 		
 		page_lb = new JLabel(Integer.toString(cnt + 1));
 		page_lb.setSize(50, 30);
 		page_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
-		page_lb.setLocation(10, 30);
-		c.add(page_lb);
+		page_lb.setForeground(Color.WHITE);
+		page_lb.setLocation(50, 40);
+		background.add(page_lb);
 		
 		shortcut_lb = new JLabel(sc.get(0)[0]);
-		shortcut_lb.setSize(1000, 50);
-		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 50));
-		shortcut_lb.setLocation(10, 70);
-		c.add(shortcut_lb);
+		shortcut_lb.setSize(1000, 70);
+		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 70));
+		shortcut_lb.setForeground(Color.WHITE);
+		shortcut_lb.setLocation(50, 100);
+		background.add(shortcut_lb);
 		
 		explain_lb = new JLabel(sc.get(0)[1]);
-		explain_lb.setSize(1000, 100);
-		explain_lb.setFont(new Font("나눔바른고딕", Font.PLAIN, 30));
-		explain_lb.setLocation(10, 100);
-		c.add(explain_lb);
+		explain_lb.setSize(1000, 110);
+		explain_lb.setFont(new Font("나눔바른고딕", Font.PLAIN, 35));
+		explain_lb.setForeground(Color.WHITE);
+		explain_lb.setLocation(50, 160);
+		background.add(explain_lb);
 		
-		JButton prev_btn = new JButton("< Prev");
-		prev_btn.setSize(200, 40);
-		prev_btn.setFont(new Font("Calibri", Font.PLAIN, 30));
-		prev_btn.setLocation(150, 450);
+		sc_prev = new ImageIcon("image/shortcut_prevbtn.png");
+		sc_prevroll = new ImageIcon("image/shortcut_prevbtn2.png");
+		
+		JButton prev_btn = new JButton(sc_prev);
+		prev_btn.setPressedIcon(sc_prevroll);
+		prev_btn.setRolloverIcon(sc_prevroll);
+		
+		prev_btn.setBorderPainted(false);
+		prev_btn.setContentAreaFilled(false);
+		prev_btn.setFocusPainted(false);
+		
+		prev_btn.setSize(250, 70);
+		prev_btn.setLocation(170, 450);
 		prev_btn.addActionListener(new PrevBtnAction());
-		c.add(prev_btn);
+		background.add(prev_btn);
 		
-		JButton next_btn = new JButton("Next >");
-		next_btn.setSize(200, 40);
-		next_btn.setFont(new Font("Calibri", Font.PLAIN, 30));
-		next_btn.setLocation(750, 450);
+		sc_next = new ImageIcon("image/shortcut_nextbtn.png");
+		sc_nextroll = new ImageIcon("image/shortcut_nextbtn2.png");
+		
+		JButton next_btn = new JButton(sc_next);
+		next_btn.setPressedIcon(sc_nextroll);
+		next_btn.setRolloverIcon(sc_nextroll);
+		
+		next_btn.setBorderPainted(false);
+		next_btn.setContentAreaFilled(false);
+		next_btn.setFocusPainted(false);
+		
+		next_btn.setSize(250, 70);
+		next_btn.setLocation(680, 450);
 		next_btn.addActionListener(new NextBtnAction());
-		c.add(next_btn);
+		background.add(next_btn);
 		
+		setContentPane(background);
+		setLayout(null);
 		setSize(1100, 700);
 		setResizable(false);
 		setVisible(true);

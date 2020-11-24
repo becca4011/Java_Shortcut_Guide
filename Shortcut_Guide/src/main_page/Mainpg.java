@@ -6,12 +6,7 @@ import java.awt.event.*;
 
 public class Mainpg extends JFrame
 {
-	ImageIcon sc_bg;
-	ImageIcon sc_logo;
-	ImageIcon sc_dict_btn;
-	ImageIcon sc_dictroll_btn;
-	ImageIcon sc_srh_btn;
-	ImageIcon sc_srhroll_btn;
+	ImageIcon sc_bg, sc_logo, sc_dict_btn, sc_dictroll_btn, sc_srh_btn, sc_srhroll_btn;
 	
 	public Mainpg()
 	{
@@ -42,6 +37,7 @@ public class Mainpg extends JFrame
 		
 		dict.setBorderPainted(false);
 		dict.setContentAreaFilled(false);
+		dict.setFocusPainted(false);
 		
 		dict.setSize(250, 70);
 		dict.setLocation(170, 450);
@@ -68,6 +64,7 @@ public class Mainpg extends JFrame
 		
 		search.setBorderPainted(false);
 		search.setContentAreaFilled(false);
+		search.setFocusPainted(false);
 		
 		search.setSize(250, 70);
 		search.setLocation(680, 450);

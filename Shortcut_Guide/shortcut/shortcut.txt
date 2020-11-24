@@ -51,17 +51,17 @@ SQL.TSqlEditorToggleExecutionPlan
 Ctrl+Alt+Break
 디버그.모두중단		
 Ctrl+B
-빌드.선택 영역 빌드(2019),Debug.FunctionBreakpoint(2017),TeamFoundationContextMenus.Commands.GoToBuilds			
+빌드.선택 영역 빌드		
 Ctrl+Alt+B
 디버그.중단점					
 Ctrl+Alt+C
-디버그.호출스택,OtherContextMenus.UITestEditorContextMenu.Movecode				
+디버그.호출스택			
 Ctrl+Shift+F9
 Format.CenterHorizontal				
 Alt+F2
 Debug.DiagnosticsHub.Launch		
 Ctrl+Alt+D
-디버그.디스어셈블리	,OtherContextMenus.UITestEditorContextMenu.InsertDelayBefore,View.ReportData
+디버그.디스어셈블리
 Ctrl+Alt+V, D
 Debug.DOMExplorer		
 Ctrl+F9
@@ -139,9 +139,7 @@ Ctrl+Alt+Q
 Ctrl+Shift+R
 Format.ResetLayout.All,디버그.Windows응용프로그램새로고침			
 Ctrl+Alt+G
-디버그.레지스터					
-Ctrl+D, Ctrl+R
-테스트
+디버그.레지스터
 Ctrl+Shift+F5
 디버그.다시시작			
 Ctrl+F10
