@@ -31,13 +31,13 @@ public class Mainpg extends JFrame
         sc_dict_btn = new ImageIcon("image/shortcut_dictbtn.png");
         sc_dictroll_btn = new ImageIcon("image/shortcut_dictbtn2.png");
         
-		JButton dict = new JButton(sc_dict_btn);
-		dict.setPressedIcon(sc_dictroll_btn);
-		dict.setRolloverIcon(sc_dictroll_btn);
+		JButton dict = new JButton(sc_dict_btn); // 이미지 버튼
+		dict.setPressedIcon(sc_dictroll_btn); // 버튼이 클릭된 경우
+		dict.setRolloverIcon(sc_dictroll_btn); // 버튼에 마우스가 올라간 경우
 		
-		dict.setBorderPainted(false);
-		dict.setContentAreaFilled(false);
-		dict.setFocusPainted(false);
+		dict.setBorderPainted(false); // 외곽선을 없앰
+		dict.setContentAreaFilled(false); // 내용영역 채우기를 하지 않음
+		dict.setFocusPainted(false); // 포커스가 보이지 않도록 함
 		
 		dict.setSize(250, 70);
 		dict.setLocation(170, 450);
@@ -52,7 +52,6 @@ public class Mainpg extends JFrame
 			}
 		});
 		background.add(dict);
-		
 		
 		// Search 버튼
 		sc_srh_btn = new ImageIcon("image/shortcut_srhbtn.png");

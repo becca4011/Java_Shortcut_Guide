@@ -17,7 +17,7 @@ public class Shortcut_Dictionary extends JFrame
 	private int cnt = 0;
 	private int pageCnt = 1;
 	
-	ImageIcon sc_bg, sc_prev, sc_prevroll, sc_next, sc_nextroll;
+	ImageIcon sc_bg, sc_prev, sc_prevroll, sc_next, sc_nextroll, sc_home;
 	
 	public Shortcut_Dictionary()
 	{
@@ -58,7 +58,8 @@ public class Shortcut_Dictionary extends JFrame
                 super.paintComponent(g);
             }
         };
-		
+        
+        // 페이지
 		page_lb = new JLabel(Integer.toString(cnt + 1));
 		page_lb.setSize(50, 30);
 		page_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
@@ -66,6 +67,7 @@ public class Shortcut_Dictionary extends JFrame
 		page_lb.setLocation(50, 40);
 		background.add(page_lb);
 		
+		// 단축키
 		shortcut_lb = new JLabel(sc.get(0)[0]);
 		shortcut_lb.setSize(1000, 70);
 		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 70));
@@ -73,6 +75,7 @@ public class Shortcut_Dictionary extends JFrame
 		shortcut_lb.setLocation(50, 100);
 		background.add(shortcut_lb);
 		
+		// 설명
 		explain_lb = new JLabel(sc.get(0)[1]);
 		explain_lb.setSize(1000, 110);
 		explain_lb.setFont(new Font("나눔바른고딕", Font.PLAIN, 35));
@@ -80,6 +83,7 @@ public class Shortcut_Dictionary extends JFrame
 		explain_lb.setLocation(50, 160);
 		background.add(explain_lb);
 		
+		// 이전 버튼
 		sc_prev = new ImageIcon("image/shortcut_prevbtn.png");
 		sc_prevroll = new ImageIcon("image/shortcut_prevbtn2.png");
 		
@@ -96,6 +100,7 @@ public class Shortcut_Dictionary extends JFrame
 		prev_btn.addActionListener(new PrevBtnAction());
 		background.add(prev_btn);
 		
+		// 다음 버튼
 		sc_next = new ImageIcon("image/shortcut_nextbtn.png");
 		sc_nextroll = new ImageIcon("image/shortcut_nextbtn2.png");
 		
@@ -111,6 +116,19 @@ public class Shortcut_Dictionary extends JFrame
 		next_btn.setLocation(680, 450);
 		next_btn.addActionListener(new NextBtnAction());
 		background.add(next_btn);
+		
+		// Home 버튼
+		sc_home = new ImageIcon("image/shortcut_logo.png");
+				
+		JButton home = new JButton(sc_home);
+				
+		home.setBorderPainted(false);
+		home.setContentAreaFilled(false);
+		home.setFocusPainted(false);
+				
+		home.setSize(250, 250);
+		home.setLocation(430, 370);
+		background.add(home);
 		
 		setContentPane(background);
 		setLayout(null);
