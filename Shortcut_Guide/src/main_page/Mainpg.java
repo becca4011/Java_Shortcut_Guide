@@ -32,6 +32,7 @@ public class Mainpg extends JFrame
             }
         };
 		
+        // Dictionary 버튼
         sc_dict_btn = new ImageIcon("image/shortcut_dictbtn.png");
         sc_dictroll_btn = new ImageIcon("image/shortcut_dictbtn2.png");
         
@@ -41,9 +42,10 @@ public class Mainpg extends JFrame
 		
 		dict.setBorderPainted(false);
 		dict.setContentAreaFilled(false);
+		
 		dict.setSize(250, 70);
-		//dict.setFont(new Font("Calibri", Font.PLAIN, 30));
-		dict.setLocation(150, 450);
+		dict.setLocation(170, 450);
+		
 		dict.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e)
@@ -55,6 +57,8 @@ public class Mainpg extends JFrame
 		});
 		background.add(dict);
 		
+		
+		// Search 버튼
 		sc_srh_btn = new ImageIcon("image/shortcut_srhbtn.png");
         sc_srhroll_btn = new ImageIcon("image/shortcut_srhbtn2.png");
         
@@ -64,13 +68,13 @@ public class Mainpg extends JFrame
 		
 		search.setBorderPainted(false);
 		search.setContentAreaFilled(false);
+		
 		search.setSize(250, 70);
-		//search.setFont(new Font("Calibri", Font.PLAIN, 30));
-		search.setLocation(700, 450);
+		search.setLocation(680, 450);
 		background.add(search);
 		
-		setContentPane(background);
-		setLayout(null);
+		setContentPane(background); // 패널을 컨텐트팬으로 설정
+		setLayout(null); // 배치관리자 제거
 		setSize(1100, 700);
 		setResizable(false); // 크기 변경 불가능하도록 함
 		setVisible(true);
