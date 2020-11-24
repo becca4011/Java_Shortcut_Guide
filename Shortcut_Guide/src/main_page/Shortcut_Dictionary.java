@@ -4,16 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Shortcut_Dictionary extends JFrame
 {
-	static List<String> sc = new ArrayList<String>();
+	static LinkedList<String[]> sc = new LinkedList<>();
 	JLabel shortcut_lb = new JLabel();
 	JLabel explain_lb = new JLabel();
 	JLabel page_lb = new JLabel();
+	boolean isNext = false;
+	boolean isPrev = false;
 	private int cnt = 0;
+	private int pageCnt = 1;
 	
 	public Shortcut_Dictionary()
 	{
@@ -23,13 +25,15 @@ public class Shortcut_Dictionary extends JFrame
 			FileReader fr = new FileReader(read);
 			BufferedReader br = new BufferedReader(fr);
 			
-			String s;
-			// 파일에서 한 줄씩 읽어와 list에 저장
-			while((s = br.readLine()) != null)
-			{
-				sc.add(s);
+			StringBuilder input = new StringBuilder();
+			// input에 두 줄을 ※로 나눠놓고, split으로 ※를 기준으로 쪼개어 추가한다
+			while(true) {
+				input.append(br.readLine()+"※");
+				if(input.toString().equals("null※")) break;
+				input.append(br.readLine());
+				sc.add(input.toString().split("※"));
+				input.replace(0, input.length(), "");
 			}
-			
 			if(fr != null) fr.close();
 			if(br != null) br.close();
 		}
@@ -50,13 +54,13 @@ public class Shortcut_Dictionary extends JFrame
 		page_lb.setLocation(10, 30);
 		c.add(page_lb);
 		
-		shortcut_lb = new JLabel(sc.get(0));
+		shortcut_lb = new JLabel(sc.get(0)[0]);
 		shortcut_lb.setSize(1000, 50);
 		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 50));
 		shortcut_lb.setLocation(10, 70);
 		c.add(shortcut_lb);
 		
-		explain_lb = new JLabel(sc.get(1));
+		explain_lb = new JLabel(sc.get(0)[1]);
 		explain_lb.setSize(1000, 100);
 		explain_lb.setFont(new Font("나눔바른고딕", Font.PLAIN, 30));
 		explain_lb.setLocation(10, 100);
@@ -86,14 +90,19 @@ public class Shortcut_Dictionary extends JFrame
 		@Override
 		public void actionPerformed(ActionEvent e)
 		{
-			JButton b = (JButton)e.getSource();
-			
-			if (cnt == 0)
-				cnt = sc.size(); // cnt가 0일 때, 리스트의 크기를 cnt로 함
-			
-			explain_lb.setText(sc.get(--cnt)); // 기능 
-			shortcut_lb.setText(sc.get(--cnt)); // 단축키
-			page_lb.setText(Integer.toString(cnt + 1));
+			cnt--;
+			pageCnt--;
+			if(cnt == -1) 
+			{
+				cnt = sc.size() - 1; // cnt가 -1인 경우 cnt를 sc의 요소 개수 - 1로 함
+			}
+			if(pageCnt == 0) 
+			{
+				pageCnt = sc.size(); // pageCnt가 0인 경우 pageCnt를 sc의 요소 개수로 함
+			}
+			page_lb.setText(Integer.toString(pageCnt));
+			shortcut_lb.setText(sc.get(cnt)[0]); // 단축키
+			explain_lb.setText(sc.get(cnt)[1]); // 기능 
 		}
 	}
 	
@@ -102,14 +111,19 @@ public class Shortcut_Dictionary extends JFrame
 		@Override
 		public void actionPerformed(ActionEvent e)
 		{
-			JButton b = (JButton)e.getSource();
-			
-			if (cnt == sc.size() - 1)
-				cnt = 0; // cnt에 1을 증가시킨 것이 리스트의 크기와 같을 경우 cnt를 0으로 함
-			
-			explain_lb.setText(sc.get(++cnt)); // 기능(수정해야 함)
-			shortcut_lb.setText(sc.get(++cnt)); // 단축키
-			page_lb.setText(Integer.toString(cnt + 1));
+			cnt++;
+			pageCnt++;
+			if(cnt == sc.size()) 
+			{
+				cnt = 0; // cnt가 sc의 요소 개수와 같으면 cnt를 0으로 함
+			}
+			if(pageCnt == sc.size() + 1) 
+			{
+				pageCnt = 1; // pageCnt가 sc의 요소 개수 + 1과 같으면 pageCnt를 1로 함
+			}
+			page_lb.setText(Integer.toString(pageCnt));
+			shortcut_lb.setText(sc.get(cnt)[0]); // 단축키
+			explain_lb.setText(sc.get(cnt)[1]); // 기능 
 		}
 	}
 	

@@ -140,7 +140,8 @@ Ctrl+Shift+R
 Format.ResetLayout.All,디버그.Windows응용프로그램새로고침			
 Ctrl+Alt+G
 디버그.레지스터					
-Ctrl+D, Ctrl+R			
+Ctrl+D, Ctrl+R
+테스트
 Ctrl+Shift+F5
 디버그.다시시작			
 Ctrl+F10
@@ -751,7 +752,6 @@ Ctrl+R, T
 테스트 실행
 Ctrl+Alt+P
 창, 다음탭
-프로세스에 연결
 Ctrl+K, Ctrl+B
 코드 조각 관리자
 Shift+Alt+M

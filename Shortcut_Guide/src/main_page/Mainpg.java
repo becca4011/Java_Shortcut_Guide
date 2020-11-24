@@ -28,7 +28,7 @@ public class Mainpg extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				// Dictionary ¹öÆ°À» ´©¸£¸é Shortcut_Dictionary ÇÁ·¹ÀÓÀ¸·Î ³Ñ¾î°¡µµ·Ï ÇÔ
+				// Dictionary ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ Shortcut_Dictionary í”„ë ˆì„ìœ¼ë¡œ ë„˜ì–´ê°€ë„ë¡ í•¨
 				new Shortcut_Dictionary();
 				setVisible(false);
 			}
@@ -42,7 +42,7 @@ public class Mainpg extends JFrame
 		c.add(search);
 		
 		setSize(1100, 700);
-		setResizable(false); // Å©±â º¯°æ ºÒ°¡´ÉÇÏµµ·Ï ÇÔ
+		setResizable(false); // í¬ê¸° ë³€ê²½ ë¶ˆê°€ëŠ¥í•˜ë„ë¡ í•¨
 		setVisible(true);
 	}
 	
