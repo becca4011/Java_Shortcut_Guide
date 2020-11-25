@@ -4,9 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Mainpg extends JFrame
+public class Mainpg extends JPanel
 {
-	ImageIcon sc_bg, sc_logo, sc_exit; // 배경, 로고, 나가기
+	private MainFrame mf;
+	
+	ImageIcon sc_bg, sc_logo; // 배경, 로고
+	ImageIcon sc_exit, sc_exitroll; // 나가기 버튼
 	ImageIcon sc_dict_btn, sc_dictroll_btn; // Dictionary 버튼
 	ImageIcon sc_srh_btn, sc_srhroll_btn; // Search 버튼
 	
@@ -15,26 +18,11 @@ public class Mainpg extends JFrame
 	ImageIcon sc_dig_cancle, sc_dig_cancleroll; // 취소 버튼
 	
 	private ExitDialog ed;
-	private Point initialClick;
 	
-	public Mainpg()
+	public Mainpg(MainFrame mf)
 	{
-		setTitle("Shortcut Guide");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		sc_bg = new ImageIcon("image/shortcut_background.png");
-		sc_logo = new ImageIcon("image/shortcut_logo2.png");
- 
-        JPanel background = new JPanel() 
-        {
-            public void paintComponent(Graphics g) 
-            {
-                g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
-                g.drawImage(sc_logo.getImage(), 165, 155, null); // 로고
-                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
-                super.paintComponent(g);
-            }
-        };
+		this.mf = mf; // MainFrame 정보를 저장
+		setLayout(null); // 배치관리자 제거
 		
         // Dictionary 버튼
         sc_dict_btn = new ImageIcon("image/shortcut_dictbtn.png");
@@ -43,6 +31,7 @@ public class Mainpg extends JFrame
 		JButton dict = new JButton(sc_dict_btn); // 이미지 버튼
 		dict.setPressedIcon(sc_dictroll_btn); // 버튼이 클릭된 경우
 		dict.setRolloverIcon(sc_dictroll_btn); // 버튼에 마우스가 올라간 경우
+		dict.setCursor(new Cursor(Cursor.HAND_CURSOR)); // 마우스 커서를 바꿔줌
 		
 		dict.setBorderPainted(false); // 외곽선을 없앰
 		dict.setContentAreaFilled(false); // 내용영역 채우기를 하지 않음
@@ -51,16 +40,8 @@ public class Mainpg extends JFrame
 		dict.setSize(250, 70);
 		dict.setLocation(170, 450);
 		
-		dict.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				// Dictionary 버튼을 누르면 Shortcut_Dictionary 프레임으로 넘어가도록 함
-				new Shortcut_Dictionary();
-				setVisible(false);
-			}
-		});
-		background.add(dict);
+		dict.addActionListener(new DictionaryBtn());
+		add(dict);
 		
 		// Search 버튼
 		sc_srh_btn = new ImageIcon("image/shortcut_srhbtn.png");
@@ -69,6 +50,7 @@ public class Mainpg extends JFrame
 		JButton search = new JButton(sc_srh_btn);
 		search.setPressedIcon(sc_srhroll_btn);
 		search.setRolloverIcon(sc_srhroll_btn);
+		search.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
 		search.setBorderPainted(false);
 		search.setContentAreaFilled(false);
@@ -77,45 +59,75 @@ public class Mainpg extends JFrame
 		search.setSize(250, 70);
 		search.setLocation(680, 450);
 		
-		search.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e)
-			{
-				
-			}
-		});
-		background.add(search);
+		search.addActionListener(new SearchBtn());
+		add(search);
 		
 		// Exit 버튼
-		ed = new ExitDialog(this, "Exit");
+		ed = null;
 		sc_exit = new ImageIcon("image/shortcut_exitbtn.png");
+		sc_exitroll = new ImageIcon("image/shortcut_exitbtn2.png");
 		
 		JButton exit = new JButton(sc_exit);
+		exit.setPressedIcon(sc_exitroll);
+		exit.setRolloverIcon(sc_exitroll);
+		exit.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
 		exit.setBorderPainted(false);
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
 		
-		exit.setSize(70, 70);
-		exit.setLocation(1005, 20);
+		exit.setSize(45, 45);
+		exit.setLocation(1025, 30);
 		
 		exit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
+				ed = new ExitDialog(mf, "Exit");
 				ed.setVisible(true);
+				exit.setFocusable(false);
 			}
 		});
-		background.add(exit);
+		add(exit);
 		
-		setContentPane(background); // 패널을 컨텐트팬으로 설정
-		setLayout(null); // 배치관리자 제거
-		setSize(1100, 700);
-		setResizable(false); // 크기 변경 불가능하도록 함
-		setUndecorated(true); // 프레임의 타이틀바를 없앰
-		setVisible(true);
+		addKeyListener(new KeyAdapter() {
+			public void keyPressed(KeyEvent e)
+			{
+				if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+					ed = new ExitDialog(mf, "Exit");
+					ed.setVisible(true);
+				}
+			}
+		});
 		
-		this.addMouseListener(new moveWindows()); // 윈도우 이동하기 위해 설정
-        this.addMouseMotionListener(new moveWindows()); // 윈도우 이동하기 위해 설정
+		this.setFocusable(true); // 패널 포커스 활성화
+        this.requestFocus(); // 패널 강제 포커스 설정
 	}
+	
+	public void paintComponent(Graphics g) // BackGround 설정을 위한 그리기 함수 
+	{ 
+        sc_bg = new ImageIcon("image/shortcut_background.png");
+        sc_logo = new ImageIcon("image/shortcut_logo2.png");
+        g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null);
+        g.drawImage(sc_logo.getImage(), 165, 155, null);
+        setOpaque(false);
+        super.paintComponent(g);
+    }
+	
+	class DictionaryBtn implements ActionListener 
+	{
+        public void actionPerformed(ActionEvent e) 
+        {
+            mf.change("DictionaryBtn"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Dictionary Panel로 이동
+        }
+    }
+
+    class SearchBtn implements ActionListener 
+    { 
+        public void actionPerformed(ActionEvent e) 
+        {
+            mf.change("SearchBtn"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Search Panel로 이동
+        }
+    }
 	
 	// 종료 여부를 묻는 다이얼로그
 	private class ExitDialog extends JDialog
@@ -144,6 +156,7 @@ public class Mainpg extends JFrame
 			JButton exit_btn = new JButton(sc_dig_exit);
 			exit_btn.setPressedIcon(sc_dig_exitroll);
 			exit_btn.setRolloverIcon(sc_dig_exitroll);
+			exit_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			
 			exit_btn.setBorderPainted(false);
 			exit_btn.setContentAreaFilled(false);
@@ -155,6 +168,7 @@ public class Mainpg extends JFrame
 			exit_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e)
 				{
+					// 종료 버튼을 눌렀을 때 시스템 종료
 					System.exit(0);
 				}
 			});
@@ -167,6 +181,7 @@ public class Mainpg extends JFrame
 			JButton cancle_btn = new JButton(sc_dig_cancle);
 			cancle_btn.setPressedIcon(sc_dig_cancleroll);
 			cancle_btn.setRolloverIcon(sc_dig_cancleroll);
+			cancle_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			
 			cancle_btn.setBorderPainted(false);
 			cancle_btn.setContentAreaFilled(false);
@@ -178,46 +193,40 @@ public class Mainpg extends JFrame
 			cancle_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e)
 				{
+					// 취소 버튼을 누를 경우 보이지 않게 하고, 객체 삭제
 					setVisible(false);
+					ed = null;
 				}
 			});
 			background.add(cancle_btn);
 			
+			background.addKeyListener(new KeyAdapter() {
+				public void keyPressed(KeyEvent e)
+				{
+					int keyCode = e.getKeyCode();
+					if(keyCode == KeyEvent.VK_ENTER)
+					{
+						// 엔터를 누르면 시스템 종료
+						System.exit(0);
+					}
+					else if(keyCode == KeyEvent.VK_ESCAPE)
+					{
+						// ESC를 누르면 보이지 않게 하고, 객체 삭제
+						setVisible(false);
+						ed = null;
+					}
+				}
+			});
+			
 			setContentPane(background);
 			setLayout(null);
 			setUndecorated(true);
+			
 			setSize(350, 200);
-			setLocation(getWidth() / 2 + 200, getHeight() / 2 + 120);
+			setLocation(getWidth() / 2 + 210 + mf.getLocation().x, getHeight() / 2 + 120 + mf.getLocation().y);
+			
+			background.setFocusable(true);
+			background.requestFocus();
 		}
-	}
-	
-	class moveWindows extends MouseAdapter // 프레임 이동 (타이틀바를 없애서 이동 불가능한 것을 가능하도록 함)
-	{ 
-        public void mousePressed(MouseEvent e) 
-        { 
-            initialClick = e.getPoint(); // 현재 좌표 저장
-            getComponentAt(initialClick); // 저장한 좌표를 포함한 컴포넌트를 리턴 받음
-        }
-
-        public void mouseDragged(MouseEvent e) 
-        {
-            JFrame jf = (JFrame) e.getSource(); // 드래그 된 JFrame의 정보를 받아옴
-            
-            int thisX = jf.getLocation().x; // jf의 x 값을 저장함
-            int thisY = jf.getLocation().y; // jf의 y 값을 저장함
-
-            int xMoved = e.getX() - initialClick.x; // 현재 마우스 위치의 x좌표와 첫 마우스 클릭 위치 x좌표를 빼줌
-            int yMoved = e.getY() - initialClick.y; // 현재 마우스 위치의 y좌표와 첫 마우스 클릭 위치 y좌표를 빼줌
-
-            int X = thisX + xMoved; // jf x값과 이동한 x 값을 더함
-            int Y = thisY + yMoved; // jf y값과 이동한 y 값을 더함
-            jf.setLocation(X, Y); // jf의 위치 변경
-        }
-    }
-
-	
-	public static void main(String[] args) 
-	{
-		new Mainpg();
 	}
 }

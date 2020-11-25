@@ -6,8 +6,10 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.*;
 
-public class Shortcut_Dictionary extends JFrame
+public class Shortcut_Dictionary extends JPanel
 {
+	private MainFrame mf;
+	
 	static LinkedList<String[]> sc = new LinkedList<>();
 	JLabel shortcut_lb = new JLabel();
 	JLabel explain_lb = new JLabel();
@@ -17,7 +19,7 @@ public class Shortcut_Dictionary extends JFrame
 	private int pageCnt = 1;
 	private HomeDialog hd;
 	
-	ImageIcon sc_bg, sc_home; // 배경, 홈버튼
+	ImageIcon sc_bg, sc_home, sc_homeroll; // 배경, 홈버튼
 	ImageIcon sc_prev, sc_prevroll; // 이전 버튼
 	ImageIcon sc_next, sc_nextroll; // 다음 버튼
 
@@ -25,8 +27,11 @@ public class Shortcut_Dictionary extends JFrame
 	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
 	ImageIcon sc_dig_cancle, sc_dig_cancleroll; // 취소 버튼
 	
-	public Shortcut_Dictionary()
+	public Shortcut_Dictionary(MainFrame mf)
 	{
+		this.mf = mf; // MainFrame 정보를 저장
+		setLayout(null);
+		
 		try
 		{
 			File read = new File("shortcut/shortcut.txt");
@@ -50,20 +55,7 @@ public class Shortcut_Dictionary extends JFrame
 			e.printStackTrace();
 		}
 		
-		setTitle("Shortcut Dictionary");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		sc_bg = new ImageIcon("image/shortcut_background.png");
-		
-		JPanel background = new JPanel() 
-        {
-            public void paintComponent(Graphics g) 
-            {
-                g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
-                setOpaque(false); // 이미지를 표시할 수 있도록 함
-                super.paintComponent(g);
-            }
-        };
         
         // 페이지
 		page_lb = new JLabel(Integer.toString(cnt + 1));
@@ -71,7 +63,7 @@ public class Shortcut_Dictionary extends JFrame
 		page_lb.setFont(new Font("Calibri", Font.PLAIN, 30));
 		page_lb.setForeground(Color.WHITE);
 		page_lb.setLocation(50, 40);
-		background.add(page_lb);
+		add(page_lb);
 		
 		// 단축키
 		shortcut_lb = new JLabel(sc.get(0)[0]);
@@ -79,7 +71,7 @@ public class Shortcut_Dictionary extends JFrame
 		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 70));
 		shortcut_lb.setForeground(Color.WHITE);
 		shortcut_lb.setLocation(50, 100);
-		background.add(shortcut_lb);
+		add(shortcut_lb);
 		
 		// 설명
 		explain_lb = new JLabel(sc.get(0)[1]);
@@ -87,7 +79,7 @@ public class Shortcut_Dictionary extends JFrame
 		explain_lb.setFont(new Font("나눔바른고딕", Font.PLAIN, 35));
 		explain_lb.setForeground(Color.WHITE);
 		explain_lb.setLocation(50, 160);
-		background.add(explain_lb);
+		add(explain_lb);
 		
 		// 이전 버튼
 		sc_prev = new ImageIcon("image/shortcut_prevbtn.png");
@@ -96,15 +88,17 @@ public class Shortcut_Dictionary extends JFrame
 		JButton prev_btn = new JButton(sc_prev);
 		prev_btn.setPressedIcon(sc_prevroll);
 		prev_btn.setRolloverIcon(sc_prevroll);
+		prev_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
 		prev_btn.setBorderPainted(false);
 		prev_btn.setContentAreaFilled(false);
 		prev_btn.setFocusPainted(false);
 		
-		prev_btn.setSize(250, 70);
-		prev_btn.setLocation(170, 450);
+		prev_btn.setSize(92, 62);
+		prev_btn.setLocation(200, 450);
 		prev_btn.addActionListener(new PrevBtnAction());
-		background.add(prev_btn);
+		prev_btn.setFocusable(false);
+		add(prev_btn);
 		
 		// 다음 버튼
 		sc_next = new ImageIcon("image/shortcut_nextbtn.png");
@@ -113,42 +107,61 @@ public class Shortcut_Dictionary extends JFrame
 		JButton next_btn = new JButton(sc_next);
 		next_btn.setPressedIcon(sc_nextroll);
 		next_btn.setRolloverIcon(sc_nextroll);
+		next_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
 		next_btn.setBorderPainted(false);
 		next_btn.setContentAreaFilled(false);
 		next_btn.setFocusPainted(false);
 		
-		next_btn.setSize(250, 70);
-		next_btn.setLocation(660, 450);
+		next_btn.setSize(92, 62);
+		next_btn.setLocation(800, 450);
 		next_btn.addActionListener(new NextBtnAction());
-		background.add(next_btn);
+		next_btn.setFocusable(false);
+		add(next_btn);
 		
 		// 홈 버튼
-		hd = new HomeDialog(this, "Home");
+		hd = null;
 		sc_home = new ImageIcon("image/shortcut_logo.png");
+		sc_homeroll = new ImageIcon("image/shortcut_logo3.png");
 				
 		JButton home = new JButton(sc_home);
-				
+		home.setPressedIcon(sc_homeroll);
+		home.setRolloverIcon(sc_homeroll);
+		home.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		
 		home.setBorderPainted(false);
 		home.setContentAreaFilled(false);
 		home.setFocusPainted(false);
 				
-		home.setSize(250, 250);
-		home.setLocation(420, 370);
+		home.setSize(123, 150);
+		home.setLocation(500, 410);
 		home.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
+				hd = new HomeDialog(mf, "Exit");
 				hd.setVisible(true);
+				home.setFocusable(false);
 			}
 		});
-		background.add(home);
+		add(home);
 		
-		setContentPane(background);
-		setLayout(null);
-		setSize(1100, 700);
-		setResizable(false);
-		setVisible(true);
+		addKeyListener(new KeyAdapter() {
+			public void keyPressed(KeyEvent e)
+			{
+				if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+					hd = new HomeDialog(mf, "Home");
+					hd.setVisible(true);
+				}
+			}
+		});
 	}
+	
+	public void paintComponent(Graphics g) 
+    {
+        g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
+        setOpaque(false); // 이미지를 표시할 수 있도록 함
+        super.paintComponent(g);
+    }
 	
 	// 이전 버튼을 눌렀을 때의 이벤트
 	private class PrevBtnAction implements ActionListener
@@ -168,7 +181,7 @@ public class Shortcut_Dictionary extends JFrame
 			}
 			page_lb.setText(Integer.toString(pageCnt));
 			shortcut_lb.setText(sc.get(cnt)[0]); // 단축키
-			explain_lb.setText(sc.get(cnt)[1]); // 기능 
+			explain_lb.setText(sc.get(cnt)[1]); // 기능
 		}
 	}
 	
@@ -218,26 +231,26 @@ public class Shortcut_Dictionary extends JFrame
 			sc_dig_home = new ImageIcon("image/shortcut_digok.png");
 			sc_dig_homeroll = new ImageIcon("image/shortcut_digok2.png");
 			
-			JButton exit_btn = new JButton(sc_dig_home);
-			exit_btn.setPressedIcon(sc_dig_homeroll);
-			exit_btn.setRolloverIcon(sc_dig_homeroll);
+			JButton home_btn = new JButton(sc_dig_home);
+			home_btn.setPressedIcon(sc_dig_homeroll);
+			home_btn.setRolloverIcon(sc_dig_homeroll);
+			home_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			home_btn.setBorderPainted(false);
+			home_btn.setContentAreaFilled(false);
+			home_btn.setFocusPainted(false);
 			
-			exit_btn.setBorderPainted(false);
-			exit_btn.setContentAreaFilled(false);
-			exit_btn.setFocusPainted(false);
+			home_btn.setSize(100, 40);
+			home_btn.setLocation(50, 135);
 			
-			exit_btn.setSize(100, 40);
-			exit_btn.setLocation(50, 135);
-			
-			exit_btn.addActionListener(new ActionListener() {
+			home_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e)
 				{
-					new Mainpg();
+					// 돌아가기 버튼을 누르면 메인으로 이동하고, 보이지 않게 함
+				    mf.change("BackToMain"); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
 					setVisible(false);
-					fr.setVisible(false);
 				}
 			});
-			background.add(exit_btn);
+			background.add(home_btn);
 			
 			// 취소 버튼
 			sc_dig_cancle = new ImageIcon("image/shortcut_digcancle.png");
@@ -246,7 +259,7 @@ public class Shortcut_Dictionary extends JFrame
 			JButton cancle_btn = new JButton(sc_dig_cancle);
 			cancle_btn.setPressedIcon(sc_dig_cancleroll);
 			cancle_btn.setRolloverIcon(sc_dig_cancleroll);
-			
+			cancle_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			cancle_btn.setBorderPainted(false);
 			cancle_btn.setContentAreaFilled(false);
 			cancle_btn.setFocusPainted(false);
@@ -257,21 +270,41 @@ public class Shortcut_Dictionary extends JFrame
 			cancle_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e)
 				{
+					// 취소 버튼을 누르면 보이지 않게 하고, 객체 삭제
 					setVisible(false);
+					hd = null;
 				}
 			});
 			background.add(cancle_btn);
 			
+			background.addKeyListener(new KeyAdapter() {
+				public void keyPressed(KeyEvent e)
+				{
+					int keyCode = e.getKeyCode();
+					if(keyCode == KeyEvent.VK_ENTER)
+					{
+						// 엔터를 누르면 메인으로 돌아가고, 보이지 않게 함
+						mf.change("BackToMain");
+						setVisible(false);
+					}
+					else if(keyCode == KeyEvent.VK_ESCAPE)
+					{
+						// ESC를 누르면 보이지 않도록 하고, 객체 삭제
+						setVisible(false);
+						hd = null;
+					}
+				}
+			});
+			
 			setContentPane(background);
 			setLayout(null);
 			setUndecorated(true);
+			
 			setSize(350, 200);
-			setLocation(getWidth() / 2 + 200, getHeight() / 2 + 120);
+			setLocation(getWidth() / 2 + 210 + mf.getLocation().x, getHeight() / 2 + 120 + mf.getLocation().y);
+			
+			background.setFocusable(true);
+			background.requestFocus();
 		}
-	}
-	
-	public static void main(String[] args) 
-	{
-		new Shortcut_Dictionary();
 	}
 }
