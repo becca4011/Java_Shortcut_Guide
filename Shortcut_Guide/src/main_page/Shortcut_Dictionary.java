@@ -12,12 +12,18 @@ public class Shortcut_Dictionary extends JFrame
 	JLabel shortcut_lb = new JLabel();
 	JLabel explain_lb = new JLabel();
 	JLabel page_lb = new JLabel();
-	boolean isNext = false;
-	boolean isPrev = false;
+
 	private int cnt = 0;
 	private int pageCnt = 1;
+	private HomeDialog hd;
 	
-	ImageIcon sc_bg, sc_prev, sc_prevroll, sc_next, sc_nextroll, sc_home;
+	ImageIcon sc_bg, sc_home; // 배경, 홈버튼
+	ImageIcon sc_prev, sc_prevroll; // 이전 버튼
+	ImageIcon sc_next, sc_nextroll; // 다음 버튼
+
+	ImageIcon sc_dig_bg, sc_dig_text; // 다이얼로그 배경, 텍스트
+	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
+	ImageIcon sc_dig_cancle, sc_dig_cancleroll; // 취소 버튼
 	
 	public Shortcut_Dictionary()
 	{
@@ -54,7 +60,7 @@ public class Shortcut_Dictionary extends JFrame
             public void paintComponent(Graphics g) 
             {
                 g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
-                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
+                setOpaque(false); // 이미지를 표시할 수 있도록 함
                 super.paintComponent(g);
             }
         };
@@ -113,11 +119,12 @@ public class Shortcut_Dictionary extends JFrame
 		next_btn.setFocusPainted(false);
 		
 		next_btn.setSize(250, 70);
-		next_btn.setLocation(680, 450);
+		next_btn.setLocation(660, 450);
 		next_btn.addActionListener(new NextBtnAction());
 		background.add(next_btn);
 		
-		// Home 버튼
+		// 홈 버튼
+		hd = new HomeDialog(this, "Home");
 		sc_home = new ImageIcon("image/shortcut_logo.png");
 				
 		JButton home = new JButton(sc_home);
@@ -127,7 +134,13 @@ public class Shortcut_Dictionary extends JFrame
 		home.setFocusPainted(false);
 				
 		home.setSize(250, 250);
-		home.setLocation(430, 370);
+		home.setLocation(420, 370);
+		home.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				hd.setVisible(true);
+			}
+		});
 		background.add(home);
 		
 		setContentPane(background);
@@ -137,6 +150,7 @@ public class Shortcut_Dictionary extends JFrame
 		setVisible(true);
 	}
 	
+	// 이전 버튼을 눌렀을 때의 이벤트
 	private class PrevBtnAction implements ActionListener
 	{
 		@Override
@@ -158,6 +172,7 @@ public class Shortcut_Dictionary extends JFrame
 		}
 	}
 	
+	// 다음 버튼을 눌렀을 때의 이벤트
 	private class NextBtnAction implements ActionListener
 	{
 		@Override
@@ -176,6 +191,82 @@ public class Shortcut_Dictionary extends JFrame
 			page_lb.setText(Integer.toString(pageCnt));
 			shortcut_lb.setText(sc.get(cnt)[0]); // 단축키
 			explain_lb.setText(sc.get(cnt)[1]); // 기능 
+		}
+	}
+	
+	// 메인페이지로 돌아갈지에 대한 여부를 묻는 다이얼로그
+	private class HomeDialog extends JDialog
+	{
+		public HomeDialog(JFrame fr, String title)
+		{
+			super(fr, title, true);
+			
+			sc_dig_bg = new ImageIcon("image/shortcut_digback.png");
+			sc_dig_text = new ImageIcon("image/shortcut_dighometext.png");
+			JPanel background = new JPanel() 
+	        {
+	            public void paintComponent(Graphics g) 
+	            {
+	                g.drawImage(sc_dig_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
+	                g.drawImage(sc_dig_text.getImage(), 45, 45, null);
+	                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
+	                super.paintComponent(g);
+	            }
+	        };
+			
+			// 돌아가기 버튼
+			sc_dig_home = new ImageIcon("image/shortcut_digok.png");
+			sc_dig_homeroll = new ImageIcon("image/shortcut_digok2.png");
+			
+			JButton exit_btn = new JButton(sc_dig_home);
+			exit_btn.setPressedIcon(sc_dig_homeroll);
+			exit_btn.setRolloverIcon(sc_dig_homeroll);
+			
+			exit_btn.setBorderPainted(false);
+			exit_btn.setContentAreaFilled(false);
+			exit_btn.setFocusPainted(false);
+			
+			exit_btn.setSize(100, 40);
+			exit_btn.setLocation(50, 135);
+			
+			exit_btn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e)
+				{
+					new Mainpg();
+					setVisible(false);
+					fr.setVisible(false);
+				}
+			});
+			background.add(exit_btn);
+			
+			// 취소 버튼
+			sc_dig_cancle = new ImageIcon("image/shortcut_digcancle.png");
+			sc_dig_cancleroll = new ImageIcon("image/shortcut_digcancle2.png");
+			
+			JButton cancle_btn = new JButton(sc_dig_cancle);
+			cancle_btn.setPressedIcon(sc_dig_cancleroll);
+			cancle_btn.setRolloverIcon(sc_dig_cancleroll);
+			
+			cancle_btn.setBorderPainted(false);
+			cancle_btn.setContentAreaFilled(false);
+			cancle_btn.setFocusPainted(false);
+			
+			cancle_btn.setSize(100, 40);
+			cancle_btn.setLocation(200, 135);
+			
+			cancle_btn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e)
+				{
+					setVisible(false);
+				}
+			});
+			background.add(cancle_btn);
+			
+			setContentPane(background);
+			setLayout(null);
+			setUndecorated(true);
+			setSize(350, 200);
+			setLocation(getWidth() / 2 + 200, getHeight() / 2 + 120);
 		}
 	}
 	
