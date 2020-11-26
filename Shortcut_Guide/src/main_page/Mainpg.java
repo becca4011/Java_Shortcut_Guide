@@ -103,7 +103,8 @@ public class Mainpg extends JPanel
         this.requestFocus(); // 패널 강제 포커스 설정
 	}
 	
-	public void paintComponent(Graphics g) // BackGround 설정을 위한 그리기 함수 
+	// 배경 설정
+	public void paintComponent(Graphics g) 
 	{ 
         sc_bg = new ImageIcon("image/shortcut_background.png");
         sc_logo = new ImageIcon("image/shortcut_logo2.png");
@@ -113,19 +114,21 @@ public class Mainpg extends JPanel
         super.paintComponent(g);
     }
 	
+	// Dictionary 버튼 이벤트
 	class DictionaryBtn implements ActionListener 
 	{
         public void actionPerformed(ActionEvent e) 
         {
-            mf.change("DictionaryBtn"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Dictionary Panel로 이동
+            mf.change("Dictionary"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Dictionary Panel로 이동
         }
     }
-
+	
+	// Search 버튼 이벤트
     class SearchBtn implements ActionListener 
     { 
         public void actionPerformed(ActionEvent e) 
         {
-            mf.change("SearchBtn"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Search Panel로 이동
+            mf.change("Search"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Search Panel로 이동
         }
     }
 	

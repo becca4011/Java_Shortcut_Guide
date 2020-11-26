@@ -145,6 +145,7 @@ public class Shortcut_Dictionary extends JPanel
 		});
 		add(home);
 		
+		// ESC가 눌렸을 경우 다이얼로그 객체 생성, 다이얼로그를 보이도록 함
 		addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent e)
 			{
@@ -156,6 +157,7 @@ public class Shortcut_Dictionary extends JPanel
 		});
 	}
 	
+	// 배경 설정
 	public void paintComponent(Graphics g) 
     {
         g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진

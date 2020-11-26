@@ -8,6 +8,7 @@ public class MainFrame extends JFrame
 {
 	private Mainpg m_pg = null;
 	private Shortcut_Dictionary s_dict = null;
+	private Shortcut_Search s_srh = null;
 	
 	private Point initialClick;
 	
@@ -32,18 +33,18 @@ public class MainFrame extends JFrame
             getContentPane().add(m_pg); // 메인 패널 추가
             m_pg.requestFocusInWindow(); // 메인 패널에 포커스 강제 설정
             break;
-        case "DictionaryBtn": // 메인에서 단축키 사전 패널로 이동시
+            
+        case "Dictionary": // 메인에서 단축키 사전 패널로 이동시
             s_dict = new Shortcut_Dictionary(this); // 단축키 사전 패널 생성(현재 JFrame 정보 전달)
             getContentPane().add(s_dict); // 단축키 사전 패널 추가
             s_dict.requestFocusInWindow(); // 단축키 사전 패널에 포커스 강제 설정
             break;
-        /*
-        case "SearchBtn": // 메인에서 프로필 패널로 이동시
-            s_srh = new ProfilePanel(this); // 프로필 패널 생성(현재 JFrame 정보 전달)
+            
+        case "Search": // 메인에서 프로필 패널로 이동시
+            s_srh = new Shortcut_Search(this); // 프로필 패널 생성(현재 JFrame 정보 전달)
             getContentPane().add(s_srh); // 프로필 패널 추가
             s_srh.requestFocusInWindow(); // 프로필 패널에 포커스 강제 설정
             break;
-        */
         }
         revalidate(); // 프레임 새로고침
         repaint(); // 프레임 다시 그리기
