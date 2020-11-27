@@ -18,10 +18,6 @@ Ctrl+F7
 빌드.컴파일
 Alt+F11
 Build.RunCodeAnalysisonSolution
-Num -
-클래스다이어그램.축소
-Num +
-클래스다이어그램.확장
 Alt+Enter
 EditorContextMenus.CodeWindow.ExecuteInInteractive
 Ctrl+K, Ctrl+G

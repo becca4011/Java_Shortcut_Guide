@@ -7,14 +7,21 @@ import java.awt.event.*;
 public class Shortcut_Search extends JPanel {
 	private MainFrame mf;
 	private HomeDialog hd;
+	private InfoDialog id;
 
 	private JTextField search;
+	private String srh_text;
 
 	ImageIcon sc_bg, sc_kb; // 배경, 키보드
 	ImageIcon sc_sh, sc_shroll; // 검색 아이콘
+	ImageIcon sc_info, sc_inforoll; // 검색 안내 아이콘
+	
 	ImageIcon sc_dig_bg, sc_dig_text; // 다이얼로그 배경, 텍스트
 	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
 	ImageIcon sc_dig_cancle, sc_dig_cancleroll; // 취소 버튼
+	
+	ImageIcon sc_info_bg, sc_info_text; // 다이얼로그 배경, 텍스트
+	ImageIcon sc_dig_ok, sc_dig_okroll; // 확인 버튼
 
 	public Shortcut_Search(MainFrame mf) 
 	{
@@ -22,6 +29,7 @@ public class Shortcut_Search extends JPanel {
 		setLayout(null);
 
 		hd = null;
+		id = null;
 		
 		// 텍스트필드
 		search = new JTextField(50);
@@ -55,11 +63,38 @@ public class Shortcut_Search extends JPanel {
 		sh_icon.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
+				srh_text = search.getText();
 				mf.change("Dictionary");
 			}
 		});
 		add(sh_icon);
-
+		
+		// 검색 안내 버튼
+		sc_info = new ImageIcon("image/shortcut_info.png");
+		sc_inforoll = new ImageIcon("image/shortcut_info2.png");
+		
+		JButton sg_icon = new JButton(sc_info);
+		sg_icon.setPressedIcon(sc_inforoll);
+		sg_icon.setRolloverIcon(sc_inforoll);
+		sg_icon.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		
+		sg_icon.setBorderPainted(false);
+		sg_icon.setContentAreaFilled(false);
+		sg_icon.setFocusPainted(false);
+		
+		sg_icon.setSize(47, 50);
+		sg_icon.setLocation(1022, 30);
+		
+		sg_icon.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e)
+			{
+				id = new InfoDialog(mf, "Info");
+				id.setVisible(true);
+				sg_icon.setFocusable(false);
+			}
+		});
+		add(sg_icon);
+		
 		// ESC가 눌렸을 경우 다이얼로그 객체 생성, 다이얼로그를 보이도록 함
 		addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent e) 
@@ -89,6 +124,7 @@ public class Shortcut_Search extends JPanel {
 	{
 		public void actionPerformed(ActionEvent e)
 		{
+			srh_text = search.getText();
 			mf.change("Dictionary"); // 검색 결과를 사전에서 띄워줌 (안되면 여기서 띄우기)
 		}
 	}
@@ -108,6 +144,7 @@ public class Shortcut_Search extends JPanel {
 			case KeyEvent.VK_ALT:
 				search.setText(search.getText() + "Alt");
 				e.consume(); // Alt + Space로 메뉴가 뜨는 것을 막음
+				// 이벤트가 더 이상 이벤트 리스너로 전달되지 않도록 함
 				break;
 			case KeyEvent.VK_TAB:
 				search.setText(search.getText() + "Tab");
@@ -117,12 +154,18 @@ public class Shortcut_Search extends JPanel {
 				break;
 			case KeyEvent.VK_INSERT:
 				search.setText(search.getText() + "Ins");
+				e.consume();
 				break;
 			case KeyEvent.VK_DELETE:
 				search.setText(search.getText() + "Del");
 				break;
 			case KeyEvent.VK_HOME:
 				search.setText(search.getText() + "Home");
+				e.consume();
+				break;
+			case KeyEvent.VK_END:
+				search.setText(search.getText() + "End");
+				e.consume();
 				break;
 			case KeyEvent.VK_PAGE_DOWN:
 				search.setText(search.getText() + "PgDn");
@@ -172,6 +215,7 @@ public class Shortcut_Search extends JPanel {
 				break;
 			case KeyEvent.VK_F10:
 				search.setText(search.getText() + "F10");
+				e.consume(); // F10 + Space로 메뉴가 뜨는 것을 막음
 				break;
 			case KeyEvent.VK_F11:
 				search.setText(search.getText() + "F11");
@@ -180,6 +224,63 @@ public class Shortcut_Search extends JPanel {
 				search.setText(search.getText() + "F12");
 				break;
 			}
+		}
+	}
+	
+	// 단축키 검색 시 지켜야 할 사항, 검색을 어떻게 해야하는지 안내하는 다이얼로그
+	private class InfoDialog extends JDialog 
+	{
+		public InfoDialog(JFrame fr, String title) 
+		{
+			super(fr, title, true);
+
+			sc_info_bg = new ImageIcon("image/shortcut_infoback.png");
+			sc_info_text = new ImageIcon("image/shortcut_infotext.png");
+			JPanel background = new JPanel() 
+			{
+				public void paintComponent(Graphics g) 
+				{
+					g.drawImage(sc_info_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
+					g.drawImage(sc_info_text.getImage(), 50, 50, null);
+					setOpaque(false); // 그림을 표시하게 설정,투명하게 조절
+					super.paintComponent(g);
+				}
+			};
+
+			// 확인 버튼
+			sc_dig_ok = new ImageIcon("image/shortcut_digok.png");
+			sc_dig_okroll = new ImageIcon("image/shortcut_digok2.png");
+
+			JButton ok_btn = new JButton(sc_dig_ok);
+			ok_btn.setPressedIcon(sc_dig_okroll);
+			ok_btn.setRolloverIcon(sc_dig_okroll);
+			ok_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			
+			ok_btn.setBorderPainted(false);
+			ok_btn.setContentAreaFilled(false);
+			ok_btn.setFocusPainted(false);
+
+			ok_btn.setSize(100, 40);
+			ok_btn.setLocation(300, 430);
+
+			ok_btn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) 
+				{
+					setVisible(false);
+					id = null;
+				}
+			});
+			background.add(ok_btn);
+
+			setContentPane(background);
+			setLayout(null);
+			setUndecorated(true);
+
+			setSize(730, 540);
+			setLocation(getWidth() / 2 - 180 + mf.getLocation().x, getHeight() / 2 - 180 + mf.getLocation().y);
+
+			background.setFocusable(true);
+			background.requestFocus();
 		}
 	}
 
@@ -211,6 +312,7 @@ public class Shortcut_Search extends JPanel {
 			home_btn.setPressedIcon(sc_dig_homeroll);
 			home_btn.setRolloverIcon(sc_dig_homeroll);
 			home_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			
 			home_btn.setBorderPainted(false);
 			home_btn.setContentAreaFilled(false);
 			home_btn.setFocusPainted(false);
@@ -236,6 +338,7 @@ public class Shortcut_Search extends JPanel {
 			cancle_btn.setPressedIcon(sc_dig_cancleroll);
 			cancle_btn.setRolloverIcon(sc_dig_cancleroll);
 			cancle_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			
 			cancle_btn.setBorderPainted(false);
 			cancle_btn.setContentAreaFilled(false);
 			cancle_btn.setFocusPainted(false);
