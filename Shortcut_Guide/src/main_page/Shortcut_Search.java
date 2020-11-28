@@ -20,7 +20,7 @@ public class Shortcut_Search extends JPanel {
 	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
 	ImageIcon sc_dig_cancle, sc_dig_cancleroll; // 취소 버튼
 	
-	ImageIcon sc_info_bg, sc_info_text; // 다이얼로그 배경, 텍스트
+	ImageIcon sc_info_dig; // 다이얼로그 배경, 텍스트
 	ImageIcon sc_dig_ok, sc_dig_okroll; // 확인 버튼
 
 	public Shortcut_Search(MainFrame mf) 
@@ -106,10 +106,13 @@ public class Shortcut_Search extends JPanel {
 				}
 			}
 		});
+		
+		this.setFocusable(true); // 패널 포커스 활성화
+        this.requestFocus(); // 패널 강제 포커스 설정
 	}
 
 	// BackGround 설정을 위한 그리기 함수
-	public void paintComponent(Graphics g) 
+	public void paintComponent(Graphics g)
 	{
 		sc_bg = new ImageIcon("image/shortcut_background.png");
 		sc_kb = new ImageIcon("image/keybord.png");
@@ -234,14 +237,12 @@ public class Shortcut_Search extends JPanel {
 		{
 			super(fr, title, true);
 
-			sc_info_bg = new ImageIcon("image/shortcut_infoback.png");
-			sc_info_text = new ImageIcon("image/shortcut_infotext.png");
+			sc_info_dig = new ImageIcon("image/shortcut_infodig.png");
 			JPanel background = new JPanel() 
 			{
 				public void paintComponent(Graphics g) 
 				{
-					g.drawImage(sc_info_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
-					g.drawImage(sc_info_text.getImage(), 50, 50, null);
+					g.drawImage(sc_info_dig.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
 					setOpaque(false); // 그림을 표시하게 설정,투명하게 조절
 					super.paintComponent(g);
 				}
@@ -261,7 +262,7 @@ public class Shortcut_Search extends JPanel {
 			ok_btn.setFocusPainted(false);
 
 			ok_btn.setSize(100, 40);
-			ok_btn.setLocation(300, 430);
+			ok_btn.setLocation(360, 460);
 
 			ok_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) 
@@ -276,8 +277,8 @@ public class Shortcut_Search extends JPanel {
 			setLayout(null);
 			setUndecorated(true);
 
-			setSize(730, 540);
-			setLocation(getWidth() / 2 - 180 + mf.getLocation().x, getHeight() / 2 - 180 + mf.getLocation().y);
+			setSize(828, 561);
+			setLocation(getWidth() / 2 - 280 + mf.getLocation().x, getHeight() / 2 - 200 + mf.getLocation().y);
 
 			background.setFocusable(true);
 			background.requestFocus();

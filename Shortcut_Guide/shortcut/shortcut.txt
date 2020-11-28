@@ -12,8 +12,6 @@ Shift+F6
 창.이전분할창
 Ctrl+Shift+B
 빌드.솔루션빌드
-Ctrl+Break
-빌드.취소
 Ctrl+F7
 빌드.컴파일
 Alt+F11
@@ -30,18 +28,12 @@ Ctrl+Shift+Alt+,
 View.EdgeRightMoveLeft
 Ctrl+Shift+Alt+.
 View.EdgeRightMoveRight
-Ctrl+Alt+N
-TSqlEditorCloneQuery
-Shift+Alt+PgDn
-TSqlEditorDatabaseCombo
 Shift+Alt+PgDn
 ViewFileInScriptPanel
 Alt+F10
 디버그.코드변경내용적용
 Ctrl+Alt+V, A
-디버그.자동	
-Ctrl+Alt+Break
-디버그.모두중단
+디버그.자동
 Ctrl+B
 빌드.선택 영역 빌드
 Ctrl+Alt+B
@@ -92,10 +84,10 @@ Ctrl+Alt+V, L
 디버그.지역
 Ctrl+5
 디버그.위치도구모음.프로세스콤보
-Ctrl+7
-디버그.위치도구모음.스택프레임콤보
 Ctrl+6
 디버그.위치도구모음.스레드콤보
+Ctrl+7
+디버그.위치도구모음.스택프레임콤보
 Ctrl+8
 디버그.위치도구모음.현재스레드플래그지정상태표시/숨기기
 Ctrl+9
@@ -127,7 +119,7 @@ Format.AlignCenters
 Ctrl+Alt+Q
 디버그.간략한조사식		
 Ctrl+Shift+R
-Format.ResetLayout.All,디버그.Windows응용프로그램새로고침
+디버그.Windows응용프로그램새로고침
 Ctrl+Alt+G
 디버그.레지스터
 Ctrl+Shift+F5
@@ -146,9 +138,9 @@ Ctrl+Alt+F11
 디버그.현재프로세스한단계씩코드실행
 Shift+Alt+F11
 디버그.한단계씩코드실행
-Shift+F11	
+Shift+F11
 디버그.프로시저나가기
-Ctrl+Shift+Alt+F11	
+Ctrl+Shift+Alt+F11
 디버그.현재프로세스프로시저나가기
 Ctrl+Alt+F10
 디버그.현재프로세스프로시저단위실행
@@ -208,7 +200,7 @@ Ctrl+E, Ctrl+C
 WorkflowDesigner.Collapse
 Alt+Right Arrow
 편집.단어자동완성
-Ctrl+K, W	
+Ctrl+K, W
 편집.단어자동완성
 Ctrl+K, Ctrl+W
 편집.단어자동완성
@@ -242,14 +234,14 @@ Ctrl+End
 편집.문서끝으로
 Ctrl+Shift+End
 편집.문서끝까지선택
-Shift+End		
+Shift+End
 편집.줄끝까지선택
 Ctrl+Home
 편집.문서시작으로
 Ctrl+Shift+Home
 편집.문서시작까지선택
 Shift+Home
-편집.줄시작까지선택			
+편집.줄시작까지선택
 Ctrl+M, Ctrl+X
 편집.전체개요확장
 Shift+Alt+B
@@ -448,7 +440,7 @@ Ctrl+M, Ctrl+U
 편집.현재숨기기중지
 Ctrl+M, Ctrl+P
 편집.개요표시중지
-Alt+F3, S	
+Alt+F3, S
 편집.검색중지
 Ctrl+K, Ctrl+S
 편집.코드감싸기
@@ -534,8 +526,6 @@ Ctrl+S
 파일.선택한항목저장
 Ctrl+Shift+Down Arrow
 편집.아래로컨트롤크기조정
-Shift+F9	
-디버그.간략한조사식
 Ctrl+Shift+Left Arrow
 편집.왼쪽으로컨트롤크기조정
 Ctrl+Shift+Right Arrow
@@ -546,6 +536,8 @@ Ctrl+B
 이미지.브러시도구
 Ctrl+R
 보기.개체브라우저검색콤보상자로이동
+Shift+F9
+디버그.간략한조사식
 Ctrl+Shift+F9
 디버그.모든중단점삭제
 Ctrl+F9
@@ -587,7 +579,7 @@ Shift+F1
 Ctrl+A
 편집.모두선택
 Ctrl+B
-Format.ButtonBottom
+편집.ButtonBottom
 Ctrl+Shift+U
 편집.대문자로
 Ctrl+J
@@ -666,14 +658,10 @@ Ctrl+L
 Line cut
 Ctrl+M, Ctrl+G
 컨트롤러로 이동
-Ctrl+K, Ctrl+G
-ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector
 Shift+Del
 삭제
 Ctrl+C
 복사
-Shift+Alt+L
-TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI
 Ctrl+Shift+L
 서식.책갈피삽입
 Ctrl+Alt+C
@@ -705,27 +693,27 @@ Ctrl+[, Ctrl+S
 Shift+Alt+N
 새 웹사이트
 Ctrl+'
-팀 탐색기-설정
+팀 탐색기.설정
 Ctrl+0, Ctrl+B
-팀 탐색기-빌드
+팀 탐색기.빌드
 Ctrl+0, B
-팀 탐색기-빌드
+팀 탐색기.빌드
 Ctrl+0, Ctrl+C
-팀 탐색기-연결
+팀 탐색기.연결
 Ctrl+0, C
-팀 탐색기-연결
+팀 탐색기.연결
 Ctrl+0, Ctrl+H
-팀 탐색기-홈
+팀 탐색기.홈
 Ctrl+0, H
-팀 탐색기-홈
+팀 탐색기.홈
 Ctrl+0, Ctrl+P
-팀 탐색기-보류 중인 변경 내용
+팀 탐색기.보류 중인 변경 내용
 Ctrl+0, P
-팀 탐색기-보류 중인 변경 내용
+팀 탐색기.보류 중인 변경 내용
 Ctrl+0, Ctrl+S
-팀 탐색기-설정
+팀 탐색기.설정
 Ctrl+0, S
-팀 탐색기-설정
+팀 탐색기.설정
 Ctrl+R, Ctrl+A
 debug all
 Ctrl+R, Ctrl+T
@@ -737,7 +725,7 @@ Ctrl+R, A
 Ctrl+R, T
 테스트 실행
 Ctrl+Alt+P
-창, 다음탭
+창.다음탭
 Ctrl+K, Ctrl+B
 코드 조각 관리자
 Shift+Alt+M
@@ -745,7 +733,7 @@ View.AllWindows
 Ctrl+\, Ctrl+R
 View.ArchitectureExplorer
 Ctrl+Shift+N
-편집. 폴더의다음책갈피
+편집.폴더의다음책갈피
 Ctrl+W, B
 윈도우 북마크
 Ctrl+W, Ctrl+B
@@ -757,7 +745,7 @@ Ctrl+W, Ctrl+K
 Ctrl+W, Ctrl+C
 클래스뷰
 Ctrl+K, Ctrl+V
-보기,클래스뷰검색콤보상자로이동
+보기.클래스뷰검색콤보상자로이동
 Ctrl+W, D
 코드 정의창
 Ctrl+W, Ctrl+D
@@ -773,7 +761,7 @@ Ctrl+W, U
 Ctrl+W, Ctrl+U
 문서 개요
 Ctrl+M, Ctrl+M
-보기, 마스터편집
+보기.마스터편집
 Ctrl+W, E
 에러 리스트
 Ctrl+W, Ctrl+E
@@ -806,7 +794,7 @@ Ctrl+W, Ctrl+O
 출력
 Ctrl+W, Ctrl+G
 지연된 체크인 확인
-Ctrl+Shft+8
+Ctrl+Shift+8
 View.PopBrowseContext
 Ctrl+W, Ctrl+P
 속성창
@@ -827,9 +815,9 @@ Ctrl+W, Ctrl+L
 Ctrl+.
 이미지.작은브러시
 Ctrl+Alt+L
-보기. 솔루션탐색기
+보기. 솔루션 탐색기
 Ctrl+W, S
-솔루션탐색기
+솔루션 탐색기
 Ctrl+W, Ctrl+S
 솔루션 탐색기
 Ctrl+Shift+Y
@@ -853,6 +841,6 @@ Shift+F7
 Ctrl+Alt+R
 보기.웹브라우저
 Ctrl+Shift+.
-View.ZoomIn
+보기.줌인
 Ctrl+Shift+,
-View.Zoomout
+보기.줌아웃

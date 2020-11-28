@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 public class Shortcut_Dictionary extends JPanel
 {
@@ -155,6 +156,16 @@ public class Shortcut_Dictionary extends JPanel
 				}
 			}
 		});
+		
+		// 패턴(정규식)으로 단축키 나누기 [Ctrl, K, D]
+		Pattern pattern = Pattern.compile("[Ctrl|Alt|Shift]+[Bkspce|Space|Enter|Tab|Ins|Del|Home|End|PgDn|PgUp|Up Arrow|Down Arrow|Left Arrow|Right Arrow|F[1-12]|[0-9]|[A-Z]|\\\\|,|.|=|-|`|]|[|']+");
+		String arr[];
+
+		for(int i = 0; i < sc.size(); i++)
+		{
+			arr = sc.get(i)[0].split("\\+"); // +로 나누어 arr에 저장
+			System.out.println(Arrays.asList(arr));
+		}
 	}
 	
 	// 배경 설정
