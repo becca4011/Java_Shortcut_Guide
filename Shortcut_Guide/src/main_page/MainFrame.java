@@ -24,7 +24,7 @@ public class MainFrame extends JFrame
         this.addMouseMotionListener(new moveWindows()); // 윈도우 이동하기 위해 설정
 	}
 	
-	public void change(String panelName) // 패널 변경
+	public void change(String panelName, String srh_sc[]) // 패널 변경
 	{ 
         getContentPane().removeAll(); // 현재 생성된 패널들을 모두 삭제시킴
         switch (panelName) 
@@ -35,7 +35,7 @@ public class MainFrame extends JFrame
             break;
             
         case "Dictionary": // 메인에서 단축키 사전 패널로 이동시
-            s_dict = new Shortcut_Dictionary(this); // 단축키 사전 패널 생성(현재 JFrame 정보 전달)
+            s_dict = new Shortcut_Dictionary(this, srh_sc); // 단축키 사전 패널 생성(현재 JFrame 정보 전달)
             getContentPane().add(s_dict); // 단축키 사전 패널 추가
             s_dict.requestFocusInWindow(); // 단축키 사전 패널에 포커스 강제 설정
             break;

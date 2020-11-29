@@ -28,7 +28,7 @@ public class Shortcut_Dictionary extends JPanel
 	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
 	ImageIcon sc_dig_cancle, sc_dig_cancleroll; // 취소 버튼
 	
-	public Shortcut_Dictionary(MainFrame mf)
+	public Shortcut_Dictionary(MainFrame mf, String srh_sc[])
 	{
 		this.mf = mf; // MainFrame 정보를 저장
 		setLayout(null);
@@ -56,6 +56,36 @@ public class Shortcut_Dictionary extends JPanel
 			e.printStackTrace();
 		}
 		
+		// 검색
+		String arr[];
+		int sc_cnt = 0;
+		
+		if(srh_sc != null)
+		{
+			for(int i = 0; i < sc.size(); i++)
+			{
+				arr = sc.get(i)[0].split("\\+|\\s"); // +로 나누어 arr에 저장
+	
+				if(arr.length == srh_sc.length)
+				{
+					for(int j = 0; j < srh_sc.length; j++)
+					{
+						if(arr[j].equals(srh_sc[j]))
+						{
+							sc_cnt++;
+						}
+					}
+				}
+				
+				if(sc_cnt == srh_sc.length)
+				{
+					cnt = i;
+					break;
+				}
+				sc_cnt = 0;
+			}
+		}
+		
 		sc_bg = new ImageIcon("image/shortcut_background.png");
         
         // 페이지
@@ -67,7 +97,7 @@ public class Shortcut_Dictionary extends JPanel
 		add(page_lb);
 		
 		// 단축키
-		shortcut_lb = new JLabel(sc.get(0)[0]);
+		shortcut_lb = new JLabel(sc.get(cnt)[0]);
 		shortcut_lb.setSize(1000, 70);
 		shortcut_lb.setFont(new Font("Calibri", Font.PLAIN, 70));
 		shortcut_lb.setForeground(Color.WHITE);
@@ -75,7 +105,7 @@ public class Shortcut_Dictionary extends JPanel
 		add(shortcut_lb);
 		
 		// 설명
-		explain_lb = new JLabel(sc.get(0)[1]);
+		explain_lb = new JLabel(sc.get(cnt)[1]);
 		explain_lb.setSize(1000, 110);
 		explain_lb.setFont(new Font("나눔바른고딕", Font.PLAIN, 35));
 		explain_lb.setForeground(Color.WHITE);
@@ -156,19 +186,9 @@ public class Shortcut_Dictionary extends JPanel
 				}
 			}
 		});
-		
-		// 패턴(정규식)으로 단축키 나누기 [Ctrl, K, D]
-		Pattern pattern = Pattern.compile("[Ctrl|Alt|Shift]+[Bkspce|Space|Enter|Tab|Ins|Del|Home|End|PgDn|PgUp|Up Arrow|Down Arrow|Left Arrow|Right Arrow|F[1-12]|[0-9]|[A-Z]|\\\\|,|.|=|-|`|]|[|']+");
-		String arr[];
-
-		for(int i = 0; i < sc.size(); i++)
-		{
-			arr = sc.get(i)[0].split("\\+"); // +로 나누어 arr에 저장
-			System.out.println(Arrays.asList(arr));
-		}
 	}
 	
-	// 배경 설정
+	// 배경 설정 
 	public void paintComponent(Graphics g) 
     {
         g.drawImage(sc_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
@@ -259,7 +279,7 @@ public class Shortcut_Dictionary extends JPanel
 				public void actionPerformed(ActionEvent e)
 				{
 					// 돌아가기 버튼을 누르면 메인으로 이동하고, 보이지 않게 함
-				    mf.change("BackToMain"); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
+				    mf.change("BackToMain", null); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
 					setVisible(false);
 				}
 			});
@@ -297,7 +317,7 @@ public class Shortcut_Dictionary extends JPanel
 					if(keyCode == KeyEvent.VK_ENTER)
 					{
 						// 엔터를 누르면 메인으로 돌아가고, 보이지 않게 함
-						mf.change("BackToMain");
+						mf.change("BackToMain", null);
 						setVisible(false);
 					}
 					else if(keyCode == KeyEvent.VK_ESCAPE)

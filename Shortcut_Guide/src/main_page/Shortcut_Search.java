@@ -3,6 +3,7 @@ package main_page;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Arrays;
 
 public class Shortcut_Search extends JPanel {
 	private MainFrame mf;
@@ -11,6 +12,7 @@ public class Shortcut_Search extends JPanel {
 
 	private JTextField search;
 	private String srh_text;
+	private String arr[];
 
 	ImageIcon sc_bg, sc_kb; // 배경, 키보드
 	ImageIcon sc_sh, sc_shroll; // 검색 아이콘
@@ -64,7 +66,8 @@ public class Shortcut_Search extends JPanel {
 			public void actionPerformed(ActionEvent e)
 			{
 				srh_text = search.getText();
-				mf.change("Dictionary");
+				arr = srh_text.split("\\s"); // " "로 나누어 arr에 저장
+				mf.change("Dictionary", arr);
 			}
 		});
 		add(sh_icon);
@@ -128,7 +131,8 @@ public class Shortcut_Search extends JPanel {
 		public void actionPerformed(ActionEvent e)
 		{
 			srh_text = search.getText();
-			mf.change("Dictionary"); // 검색 결과를 사전에서 띄워줌 (안되면 여기서 띄우기)
+			arr = srh_text.split("\\s"); // " "로 나누어 arr에 저장
+			mf.change("Dictionary", arr); // 검색 결과를 사전에서 띄워줌 (안되면 여기서 띄우기)
 		}
 	}
 	
@@ -262,7 +266,7 @@ public class Shortcut_Search extends JPanel {
 			ok_btn.setFocusPainted(false);
 
 			ok_btn.setSize(100, 40);
-			ok_btn.setLocation(360, 460);
+			ok_btn.setLocation(360, 495);
 
 			ok_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) 
@@ -277,8 +281,8 @@ public class Shortcut_Search extends JPanel {
 			setLayout(null);
 			setUndecorated(true);
 
-			setSize(828, 561);
-			setLocation(getWidth() / 2 - 280 + mf.getLocation().x, getHeight() / 2 - 200 + mf.getLocation().y);
+			setSize(828, 594);
+			setLocation(getWidth() / 2 - 280 + mf.getLocation().x, getHeight() / 2 - 240 + mf.getLocation().y);
 
 			background.setFocusable(true);
 			background.requestFocus();
@@ -325,7 +329,7 @@ public class Shortcut_Search extends JPanel {
 				public void actionPerformed(ActionEvent e) 
 				{
 					// 돌아가기 버튼을 누르면 메인으로 이동하고, 보이지 않게 함
-					mf.change("BackToMain"); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
+					mf.change("BackToMain", null); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
 					setVisible(false);
 				}
 			});
@@ -364,7 +368,7 @@ public class Shortcut_Search extends JPanel {
 					if (keyCode == KeyEvent.VK_ENTER) 
 					{
 						// 엔터를 누르면 메인으로 돌아가고, 보이지 않게 함
-						mf.change("BackToMain");
+						mf.change("BackToMain", null);
 						setVisible(false);
 					} 
 					else if (keyCode == KeyEvent.VK_ESCAPE) 

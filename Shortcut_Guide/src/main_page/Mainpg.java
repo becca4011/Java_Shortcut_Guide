@@ -119,7 +119,7 @@ public class Mainpg extends JPanel
 	{
         public void actionPerformed(ActionEvent e) 
         {
-            mf.change("Dictionary"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Dictionary Panel로 이동
+            mf.change("Dictionary", null); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Dictionary Panel로 이동
         }
     }
 	
@@ -128,7 +128,7 @@ public class Mainpg extends JPanel
     { 
         public void actionPerformed(ActionEvent e) 
         {
-            mf.change("Search"); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Search Panel로 이동
+            mf.change("Search", null); // MainFrame에 있는 change 함수를 사용하여 Shortcut_Search Panel로 이동
         }
     }
 	
