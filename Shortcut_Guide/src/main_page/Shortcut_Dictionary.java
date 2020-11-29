@@ -1,6 +1,8 @@
 package main_page;
 
 import javax.swing.*;
+import javax.xml.crypto.dsig.keyinfo.PGPData;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -18,7 +20,9 @@ public class Shortcut_Dictionary extends JPanel
 
 	private int cnt = 0;
 	private int pageCnt = 1;
+	
 	private HomeDialog hd;
+	private NotFoundDialog nfd;
 	
 	ImageIcon sc_bg, sc_home, sc_homeroll; // 배경, 홈버튼
 	ImageIcon sc_prev, sc_prevroll; // 이전 버튼
@@ -59,6 +63,7 @@ public class Shortcut_Dictionary extends JPanel
 		// 검색
 		String arr[];
 		int sc_cnt = 0;
+		nfd = null;
 		
 		if(srh_sc != null)
 		{
@@ -80,7 +85,14 @@ public class Shortcut_Dictionary extends JPanel
 				if(sc_cnt == srh_sc.length)
 				{
 					cnt = i;
+					pageCnt = i + 1;
 					break;
+				}
+				
+				if(sc_cnt == 0 && i == sc.size() - 1)
+				{
+					nfd = new NotFoundDialog(mf, "NotFound");
+					nfd.setVisible(true);
 				}
 				sc_cnt = 0;
 			}
@@ -185,7 +197,7 @@ public class Shortcut_Dictionary extends JPanel
 					hd.setVisible(true);
 				}
 			}
-		});
+		}); 
 	}
 	
 	// 배경 설정 
@@ -260,7 +272,7 @@ public class Shortcut_Dictionary extends JPanel
 	            }
 	        };
 			
-			// 돌아가기 버튼
+			// 돌아가기(확인) 버튼
 			sc_dig_home = new ImageIcon("image/shortcut_digok.png");
 			sc_dig_homeroll = new ImageIcon("image/shortcut_digok2.png");
 			
@@ -338,6 +350,60 @@ public class Shortcut_Dictionary extends JPanel
 			
 			background.setFocusable(true);
 			background.requestFocus();
+		}
+	}
+	
+	// 검색결과를 찾지 못했을 때의 다이얼로그
+	private class NotFoundDialog extends JDialog
+	{
+		public NotFoundDialog(JFrame fr, String title)
+		{
+			super(fr, title, true);
+			
+			sc_dig_bg = new ImageIcon("image/shortcut_digback.png");
+			sc_dig_text = new ImageIcon("image/shortcut_notfound.png");
+			JPanel background = new JPanel() 
+	        {
+	            public void paintComponent(Graphics g) 
+	            {
+	                g.drawImage(sc_dig_bg.getImage(), 0, 0, getWidth(), getHeight(), null); // 배경 사진
+	                g.drawImage(sc_dig_text.getImage(), 45, 60, null);
+	                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
+	                super.paintComponent(g);
+	            }
+	        };
+			
+			// 확인 버튼
+			sc_dig_home = new ImageIcon("image/shortcut_digok.png");
+			sc_dig_homeroll = new ImageIcon("image/shortcut_digok2.png");
+			
+			JButton ok_btn = new JButton(sc_dig_home);
+			ok_btn.setPressedIcon(sc_dig_homeroll);
+			ok_btn.setRolloverIcon(sc_dig_homeroll);
+			ok_btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			ok_btn.setBorderPainted(false);
+			ok_btn.setContentAreaFilled(false);
+			ok_btn.setFocusPainted(false);
+			
+			ok_btn.setSize(100, 40);
+			ok_btn.setLocation(120, 135);
+			
+			ok_btn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e)
+				{
+					setVisible(false);
+					nfd = null;
+					mf.change("Search", null);
+				}
+			});
+			background.add(ok_btn);
+			
+			setContentPane(background);
+			setLayout(null);
+			setUndecorated(true);
+			
+			setSize(350, 200);
+			setLocation(getWidth() / 2 + 210 + mf.getLocation().x, getHeight() / 2 + 120 + mf.getLocation().y);
 		}
 	}
 }

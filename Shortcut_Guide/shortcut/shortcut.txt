@@ -49,7 +49,7 @@ Ctrl+Alt+D
 Ctrl+Alt+V, D
 디버그.DOMExplorer
 Ctrl+F9
-디버그.중단점설정
+디버그.중단점 설정
 Ctrl+Alt+E
 디버그.예외	
 Ctrl+Shift+F11
@@ -69,11 +69,11 @@ Graphics.MovePixelSelectionUp
 Shift+Alt+0
 Graphics.ZoomToActualSize
 Shift+Alt+=
-Graphics.ZoomIn
+Graphics.줌인
 Shift+Alt+-
-Graphics.ZoomOut
+Graphics.줌아웃
 Ctrl+Alt+I
-디버그.직접실행
+디버그.직접 실행
 Ctrl+Alt+Y, T
 디버그.IntelliTraceCalls
 Ctrl+Alt+Y, F
@@ -83,15 +83,15 @@ Ctrl+Alt+V, C
 Ctrl+Alt+V, L
 디버그.지역
 Ctrl+5
-디버그.위치도구모음.프로세스 콤보
+디버그.위치 도구 모음.프로세스 콤보
 Ctrl+6
-디버그.위치도구모음.스레드 콤보
+디버그.위치 도구 모음.스레드 콤보
 Ctrl+7
-디버그.위치도구모음.스택프레임 콤보
+디버그.위치 도구 모음.스택프레임 콤보
 Ctrl+8
-디버그.위치도구모음.현재 스레드 플래그 지정 상태 표시/숨기기
+디버그.위치 도구 모음.현재 스레드 플래그 지정 상태 표시/숨기기
 Ctrl+9
-디버그.위치도구모음.플래그가 지정된 스레드 표시/숨기기
+디버그.위치 도구 모음.플래그가 지정된 스레드 표시/숨기기
 Ctrl+Alt+M, 1
 디버그.메모리1
 Ctrl+Alt+M, 2

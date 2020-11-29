@@ -43,7 +43,6 @@ public class Shortcut_Search extends JPanel {
 		search.setFocusTraversalKeysEnabled(false); // 텍스트필드에서 Tab키 이동 방지(Tab을 텍스트필드에 입력하기 위해 지정)
 		
 		search.addKeyListener(new KeyInput());
-		search.addActionListener(new EnterPressed());
 		add(search);
 		
 		// 검색 버튼
@@ -125,33 +124,39 @@ public class Shortcut_Search extends JPanel {
 		super.paintComponent(g);
 	}
 	
-	// 텍스트필드에서 엔터키가 눌리면 이동하는 클래스
-	private class EnterPressed implements ActionListener
-	{
-		public void actionPerformed(ActionEvent e)
-		{
-			srh_text = search.getText();
-			arr = srh_text.split("\\s"); // " "로 나누어 arr에 저장
-			mf.change("Dictionary", arr); // 검색 결과를 사전에서 띄워줌 (안되면 여기서 띄우기)
-		}
-	}
-	
 	// 제어키를 입력받기 위한 클래스
 	private class KeyInput extends KeyAdapter 
 	{
+		public void keyTyped(KeyEvent e)
+		{   int kc = e.getKeyCode();
+			if(Character.isLowerCase(e.getKeyChar())) {
+				search.setText(search.getText() + Character.toUpperCase(e.getKeyChar()));
+				e.consume();
+			}
+			if(e.getKeyChar() == ' ') {
+				search.setText(search.getText() + "Space");
+				e.consume();
+			}
+		}
 		public void keyPressed(KeyEvent e) 
 		{
 			int kc = e.getKeyCode();
-
-			switch (kc) 
+			char kchar = e.getKeyChar();
+			e.consume(); // 이벤트가 더 이상 이벤트 리스너로 전달되지 않도록 함
+			
+			switch (kc)
 			{
+			case KeyEvent.VK_BACK_SPACE:
+				search.setText(search.getText() + "Bkspce");
+				break;
+			case KeyEvent.VK_ENTER:
+				search.setText(search.getText() + "Enter");
+				break;
 			case KeyEvent.VK_CONTROL:
 				search.setText(search.getText() + "Ctrl");
 				break;
 			case KeyEvent.VK_ALT:
 				search.setText(search.getText() + "Alt");
-				e.consume(); // Alt + Space로 메뉴가 뜨는 것을 막음
-				// 이벤트가 더 이상 이벤트 리스너로 전달되지 않도록 함
 				break;
 			case KeyEvent.VK_TAB:
 				search.setText(search.getText() + "Tab");
@@ -161,18 +166,15 @@ public class Shortcut_Search extends JPanel {
 				break;
 			case KeyEvent.VK_INSERT:
 				search.setText(search.getText() + "Ins");
-				e.consume();
 				break;
 			case KeyEvent.VK_DELETE:
 				search.setText(search.getText() + "Del");
 				break;
 			case KeyEvent.VK_HOME:
 				search.setText(search.getText() + "Home");
-				e.consume();
 				break;
 			case KeyEvent.VK_END:
 				search.setText(search.getText() + "End");
-				e.consume();
 				break;
 			case KeyEvent.VK_PAGE_DOWN:
 				search.setText(search.getText() + "PgDn");
@@ -188,7 +190,6 @@ public class Shortcut_Search extends JPanel {
 				break;
 			case KeyEvent.VK_LEFT:
 				search.setText(search.getText() + "Left Arrow");
-				e.consume(); // 왼쪽 화살표를 눌렀을 때 왼쪽으로 옮겨가는 것을 막음
 				break;
 			case KeyEvent.VK_RIGHT:
 				search.setText(search.getText() + "Right Arrow");
@@ -222,7 +223,6 @@ public class Shortcut_Search extends JPanel {
 				break;
 			case KeyEvent.VK_F10:
 				search.setText(search.getText() + "F10");
-				e.consume(); // F10 + Space로 메뉴가 뜨는 것을 막음
 				break;
 			case KeyEvent.VK_F11:
 				search.setText(search.getText() + "F11");
