@@ -5,7 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Arrays;
 
-public class Shortcut_Search extends JPanel {
+public class Shortcut_Search extends JPanel 
+{
 	private MainFrame mf;
 	private HomeDialog hd;
 	private InfoDialog id;
@@ -13,10 +14,12 @@ public class Shortcut_Search extends JPanel {
 	private JTextField search;
 	private String srh_text;
 	private String arr[];
+	private int kp = 0;
 
 	ImageIcon sc_bg, sc_kb; // 배경, 키보드
 	ImageIcon sc_sh, sc_shroll; // 검색 아이콘
 	ImageIcon sc_info, sc_inforoll; // 검색 안내 아이콘
+	ImageIcon sc_erase, sc_eraseroll; // 텍스트 지우기 아이콘
 	
 	ImageIcon sc_dig_bg, sc_dig_text; // 다이얼로그 배경, 텍스트
 	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
@@ -38,7 +41,7 @@ public class Shortcut_Search extends JPanel {
 		search.setFont(new Font("나눔바른고딕", Font.PLAIN, 30));
 		search.setBorder(BorderFactory.createEmptyBorder(3, 15, 3, 15)); // padding
 		search.setSize(460, 46);
-		search.setLocation(340, 120);
+		search.setLocation(320, 120);
 		
 		search.setFocusTraversalKeysEnabled(false); // 텍스트필드에서 Tab키 이동 방지(Tab을 텍스트필드에 입력하기 위해 지정)
 		
@@ -59,17 +62,42 @@ public class Shortcut_Search extends JPanel {
 		sh_icon.setFocusPainted(false);
 		
 		sh_icon.setSize(46, 46);
-		sh_icon.setLocation(280, 120);
+		sh_icon.setLocation(260, 120);
 		
 		sh_icon.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
 				srh_text = search.getText();
-				arr = srh_text.split("\\s"); // " "로 나누어 arr에 저장
+				arr = srh_text.split("\\s"); // 공백으로 나누어 arr에 저장
 				mf.change("Dictionary", arr);
 			}
 		});
 		add(sh_icon);
+		
+		// 텍스트 지우기 버튼
+		sc_erase = new ImageIcon("image/erase.png");
+		sc_eraseroll = new ImageIcon("image/erase2.png");
+		
+		JButton sh_erase = new JButton(sc_erase);
+		sh_erase.setPressedIcon(sc_eraseroll);
+		sh_erase.setRolloverIcon(sc_eraseroll);
+		sh_erase.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		
+		sh_erase.setBorderPainted(false);
+		sh_erase.setContentAreaFilled(false);
+		sh_erase.setFocusPainted(false);
+		
+		sh_erase.setSize(46, 46);
+		sh_erase.setLocation(795, 120);
+		
+		sh_erase.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				search.setText("");
+				kp = 0;
+			}
+		});
+		add(sh_erase);
 		
 		// 검색 안내 버튼
 		sc_info = new ImageIcon("image/shortcut_info.png");
@@ -128,22 +156,35 @@ public class Shortcut_Search extends JPanel {
 	private class KeyInput extends KeyAdapter 
 	{
 		public void keyTyped(KeyEvent e)
-		{   int kc = e.getKeyCode();
-			if(Character.isLowerCase(e.getKeyChar())) {
-				search.setText(search.getText() + Character.toUpperCase(e.getKeyChar()));
-				e.consume();
+		{
+			// 텍스트필드에 입력한 알파벳이 소문자일 경우
+			if(Character.isLowerCase(e.getKeyChar())) 
+			{
+				search.setText(search.getText() + Character.toUpperCase(e.getKeyChar())); // 소문자를 대문자로 바꿈
+				e.consume(); // 소문자가 입력되는 것을 막음 (하지 않으면 Aa로 뜸)
 			}
-			if(e.getKeyChar() == ' ') {
+			
+			// Space를 누른 경우
+			if(e.getKeyChar() == ' ') 
+			{
 				search.setText(search.getText() + "Space");
 				e.consume();
 			}
 		}
 		public void keyPressed(KeyEvent e) 
 		{
+			kp++;
 			int kc = e.getKeyCode();
-			char kchar = e.getKeyChar();
 			e.consume(); // 이벤트가 더 이상 이벤트 리스너로 전달되지 않도록 함
 			
+			// 스페이스바를 누르지 않고 한 칸을 띄워주도록 함
+			if(kp != 1) // 키보드 입력을 1번만 하지 않은 경우
+			{
+				if(e.getKeyChar() != ',') // ','를 누르지 않은 경우
+					search.setText(search.getText() + " "); // 한 칸을 띄워줌
+			}
+			
+			// 제어키를 눌렀을 때 해당 제어키의 이름을 텍스트필드에 뜨도록 함
 			switch (kc)
 			{
 			case KeyEvent.VK_BACK_SPACE:
@@ -266,7 +307,7 @@ public class Shortcut_Search extends JPanel {
 			ok_btn.setFocusPainted(false);
 
 			ok_btn.setSize(100, 40);
-			ok_btn.setLocation(360, 495);
+			ok_btn.setLocation(280, 515);
 
 			ok_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) 
@@ -281,9 +322,20 @@ public class Shortcut_Search extends JPanel {
 			setLayout(null);
 			setUndecorated(true);
 
-			setSize(828, 594);
-			setLocation(getWidth() / 2 - 280 + mf.getLocation().x, getHeight() / 2 - 240 + mf.getLocation().y);
-
+			setSize(662, 612);
+			setLocation(getWidth() / 2 - 130 + mf.getLocation().x, getHeight() / 2 - 260 + mf.getLocation().y);
+			
+			background.addKeyListener(new KeyAdapter() {
+				public void keyPressed(KeyEvent e)
+				{
+					if(e.getKeyCode() == KeyEvent.VK_ENTER)
+					{
+						// 엔터를 누르면 보이지 않게 함
+						setVisible(false);
+					}
+				}
+			});
+			
 			background.setFocusable(true);
 			background.requestFocus();
 		}

@@ -89,10 +89,12 @@ public class Mainpg extends JPanel
 		});
 		add(exit);
 		
+		// ESC를 누른 경우
 		addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent e)
 			{
 				if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+					// ExitDialog 객체 생성, 보이도록 함
 					ed = new ExitDialog(mf, "Exit");
 					ed.setVisible(true);
 				}
@@ -222,12 +224,13 @@ public class Mainpg extends JPanel
 			});
 			
 			setContentPane(background);
-			setLayout(null);
-			setUndecorated(true);
+			setLayout(null); // 배치관리자 삭제
+			setUndecorated(true); // 타이틀바 삭제
 			
 			setSize(350, 200);
 			setLocation(getWidth() / 2 + 210 + mf.getLocation().x, getHeight() / 2 + 120 + mf.getLocation().y);
 			
+			// 다이얼로그에서 키입력을 위해 포커스 설정
 			background.setFocusable(true);
 			background.requestFocus();
 		}

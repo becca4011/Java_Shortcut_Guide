@@ -64,7 +64,8 @@ public class MainFrame extends JFrame
             
             int thisX = jf.getLocation().x; // jf의 x 값을 저장함
             int thisY = jf.getLocation().y; // jf의 y 값을 저장함
-
+            
+            // initialClick를 하지 않으면 (0, 0)에 포인터가 고정된채로 움직임
             int xMoved = e.getX() - initialClick.x; // 현재 마우스 위치의 x좌표와 첫 마우스 클릭 위치 x좌표를 빼줌
             int yMoved = e.getY() - initialClick.y; // 현재 마우스 위치의 y좌표와 첫 마우스 클릭 위치 y좌표를 빼줌
 
