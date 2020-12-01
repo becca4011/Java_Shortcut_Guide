@@ -18,7 +18,7 @@ public class Crawling
 			Document doc = null;
 			
 			// 파일입출력
-			FileOutputStream fos = new FileOutputStream(new File("shortcut/shortcut.txt"));
+			FileOutputStream fos = new FileOutputStream(new File("shortcut/shortcut2.txt"));
 			OutputStreamWriter osw = new OutputStreamWriter(fos);
 			BufferedWriter bw = new BufferedWriter(osw);
 			

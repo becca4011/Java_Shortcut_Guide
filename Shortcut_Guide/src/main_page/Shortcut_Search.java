@@ -12,14 +12,23 @@ public class Shortcut_Search extends JPanel
 	private InfoDialog id;
 
 	private JTextField search;
+	private JLabel kb_type;
 	private String srh_text;
 	private String arr[];
 	private int kp = 0;
+	
+	private String key1[] = {"Esc", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Ins", "PrtSc", "Del"};
+	private String key2[] = {"`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Bkspce", "Home"};
+	private String key3[] = {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\", "PgUp"};
+	private String key4[] = {"Caps Lock", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter", "PgDn"};
+	private String key5[] = {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift", "End"};
+	private String key6[] = {"Ctrl", "Win", "Alt", "Space", "Alt", "Ctrl", "Left Arrow", "Up Arrow", "Down Arrow", "Right Arrow"};
 
-	ImageIcon sc_bg, sc_kb; // 배경, 키보드
+	ImageIcon sc_bg, sc_kb, sc_kb_tp; // 배경, 키보드, 키입력 위치 표시
 	ImageIcon sc_sh, sc_shroll; // 검색 아이콘
 	ImageIcon sc_info, sc_inforoll; // 검색 안내 아이콘
 	ImageIcon sc_erase, sc_eraseroll; // 텍스트 지우기 아이콘
+	ImageIcon sc_back, sc_backroll; // 뒤로가기 아이콘
 	
 	ImageIcon sc_dig_bg, sc_dig_text; // 다이얼로그 배경, 텍스트
 	ImageIcon sc_dig_home, sc_dig_homeroll; // 돌아가기 버튼
@@ -125,6 +134,36 @@ public class Shortcut_Search extends JPanel
 		});
 		add(sg_icon);
 		
+		sc_back = new ImageIcon("image/back.png");
+		sc_backroll = new ImageIcon("image/back2.png");
+		
+		JButton sb_icon = new JButton(sc_back);
+		sb_icon.setPressedIcon(sc_backroll);
+		sb_icon.setRolloverIcon(sc_backroll);
+		sb_icon.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		
+		sb_icon.setBorderPainted(false);
+		sb_icon.setContentAreaFilled(false);
+		sb_icon.setFocusPainted(false);
+		
+		sb_icon.setSize(48, 48);
+		sb_icon.setLocation(30, 30);
+		
+		sb_icon.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e)
+			{
+				hd = new HomeDialog(mf, "Home");
+				hd.setVisible(true);
+			}
+		});
+		add(sb_icon);
+		
+		sc_kb_tp = new ImageIcon("image/keybord_typed.png");
+		kb_type = new JLabel(sc_kb_tp);
+		kb_type.setSize(27, 27);
+		kb_type.setVisible(false);
+		add(kb_type);
+		
 		// ESC가 눌렸을 경우 다이얼로그 객체 생성, 다이얼로그를 보이도록 함
 		addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent e) 
@@ -157,10 +196,12 @@ public class Shortcut_Search extends JPanel
 	{
 		public void keyTyped(KeyEvent e)
 		{
+			String s = null;
 			// 텍스트필드에 입력한 알파벳이 소문자일 경우
 			if(Character.isLowerCase(e.getKeyChar())) 
 			{
 				search.setText(search.getText() + Character.toUpperCase(e.getKeyChar())); // 소문자를 대문자로 바꿈
+				s = Character.toString(Character.toUpperCase(e.getKeyChar()));
 				e.consume(); // 소문자가 입력되는 것을 막음 (하지 않으면 Aa로 뜸)
 			}
 			
@@ -168,11 +209,18 @@ public class Shortcut_Search extends JPanel
 			if(e.getKeyChar() == ' ') 
 			{
 				search.setText(search.getText() + "Space");
+				s = "Space";
 				e.consume();
 			}
+			
+			if(s == null)
+				s = Character.toString(e.getKeyChar());
+			if(s != null)
+				KeyTypedImage(s);
 		}
 		public void keyPressed(KeyEvent e) 
 		{
+			String s = null;
 			kp++;
 			int kc = e.getKeyCode();
 			e.consume(); // 이벤트가 더 이상 이벤트 리스너로 전달되지 않도록 함
@@ -189,88 +237,203 @@ public class Shortcut_Search extends JPanel
 			{
 			case KeyEvent.VK_BACK_SPACE:
 				search.setText(search.getText() + "Bkspce");
+				s = "Bkspce";
 				break;
 			case KeyEvent.VK_ENTER:
 				search.setText(search.getText() + "Enter");
+				s = "Enter";
 				break;
 			case KeyEvent.VK_CONTROL:
 				search.setText(search.getText() + "Ctrl");
+				s = "Ctrl";
 				break;
 			case KeyEvent.VK_ALT:
 				search.setText(search.getText() + "Alt");
+				s = "Alt";
 				break;
 			case KeyEvent.VK_TAB:
 				search.setText(search.getText() + "Tab");
+				s = "Tab";
 				break;
 			case KeyEvent.VK_SHIFT:
 				search.setText(search.getText() + "Shift");
+				s = "Shift";
 				break;
 			case KeyEvent.VK_INSERT:
 				search.setText(search.getText() + "Ins");
+				s = "Ins";
 				break;
 			case KeyEvent.VK_DELETE:
 				search.setText(search.getText() + "Del");
+				s = "Del";
 				break;
 			case KeyEvent.VK_HOME:
 				search.setText(search.getText() + "Home");
+				s = "Home";
 				break;
 			case KeyEvent.VK_END:
 				search.setText(search.getText() + "End");
+				s = "End";
 				break;
 			case KeyEvent.VK_PAGE_DOWN:
 				search.setText(search.getText() + "PgDn");
+				s = "PgDn";
 				break;
 			case KeyEvent.VK_PAGE_UP:
 				search.setText(search.getText() + "PgUp");
+				s = "PgUp";
 				break;
 			case KeyEvent.VK_UP:
 				search.setText(search.getText() + "Up Arrow");
+				s = "Up Arrow";
 				break;
 			case KeyEvent.VK_DOWN:
 				search.setText(search.getText() + "Down Arrow");
+				s = "Down Arrow";
 				break;
 			case KeyEvent.VK_LEFT:
 				search.setText(search.getText() + "Left Arrow");
+				s = "Left Arrow";
 				break;
 			case KeyEvent.VK_RIGHT:
 				search.setText(search.getText() + "Right Arrow");
+				s = "Right Arrow";
+				break;
+			case KeyEvent.VK_ESCAPE:
+				search.setText(search.getText() + "Esc");
+				s = "Esc";
 				break;
 			case KeyEvent.VK_F1:
 				search.setText(search.getText() + "F1");
+				s = "F1";
 				break;
 			case KeyEvent.VK_F2:
 				search.setText(search.getText() + "F2");
+				s = "F2";
 				break;
 			case KeyEvent.VK_F3:
 				search.setText(search.getText() + "F3");
+				s = "F3";
 				break;
 			case KeyEvent.VK_F4:
 				search.setText(search.getText() + "F4");
+				s = "F4";
 				break;
 			case KeyEvent.VK_F5:
 				search.setText(search.getText() + "F5");
+				s = "F5";
 				break;
 			case KeyEvent.VK_F6:
 				search.setText(search.getText() + "F6");
+				s = "F6";
 				break;
 			case KeyEvent.VK_F7:
 				search.setText(search.getText() + "F7");
+				s = "F7";
 				break;
 			case KeyEvent.VK_F8:
 				search.setText(search.getText() + "F8");
+				s = "F8";
 				break;
 			case KeyEvent.VK_F9:
 				search.setText(search.getText() + "F9");
+				s = "F9";
 				break;
 			case KeyEvent.VK_F10:
 				search.setText(search.getText() + "F10");
+				s = "F10";
 				break;
 			case KeyEvent.VK_F11:
 				search.setText(search.getText() + "F11");
+				s = "F11";
 				break;
 			case KeyEvent.VK_F12:
 				search.setText(search.getText() + "F12");
+				s = "F12";
 				break;
+			case KeyEvent.VK_CAPS_LOCK:
+				search.setText(search.getText() + "Caps Lock");
+				s = "Caps Lock";
+				break;
+			}
+			
+			if(s != null)
+				KeyTypedImage(s);
+		}
+	}
+	
+	public void KeyTypedImage(String st)
+	{
+		kb_type.setVisible(true);
+		
+		for(int i = 0; i < key1.length; i++)
+		{
+			if(st.equals(key1[i]))
+				kb_type.setLocation(i * 65 + 48, 300);
+		}
+		
+		for(int i = 0; i < key2.length; i++)
+		{
+			if(st.equals(key2[i]))
+			{
+				if (i == 0)
+					kb_type.setLocation(40, 355);
+				else if (i == key2.length - 2)
+					kb_type.setLocation(930, 355);
+				else if (i == key2.length - 1)
+					kb_type.setLocation(1020, 355);
+				else
+					kb_type.setLocation(i * 68 + 30, 355);
+			}
+		}
+		
+		for(int i = 0; i < key3.length; i++)
+		{
+			if(st.equals(key3[i]))
+			{
+				if (i == 0)
+					kb_type.setLocation(56, 420);
+				else
+					kb_type.setLocation(i * 68 + 68, 420);
+			}
+		}
+		
+		for(int i = 0; i < key4.length; i++)
+		{
+			if(st.equals(key4[i]))
+			{
+				if (i == 0)
+					kb_type.setLocation(70, 486);
+				else if (i == key4.length - 2)
+					kb_type.setLocation(930, 486);
+				else if (i == key4.length - 1)
+					kb_type.setLocation(1022, 486);
+				else
+					kb_type.setLocation(i * 68 + 90, 486);
+			}
+		}
+		
+		for(int i = 0; i < key5.length; i++)
+		{
+			if(st.equals(key5[i]))
+			{
+				if (i == 0)
+					kb_type.setLocation(70, 552);
+				else if (i == key5.length - 2)
+					kb_type.setLocation(930, 552);
+				else if (i == key5.length - 1)
+					kb_type.setLocation(1022, 552);
+				else
+					kb_type.setLocation(i * 68 + 116, 552);
+			}
+		}
+		
+		for(int i = 0; i < key6.length; i++)
+		{
+			if(st.equals(key6[i]))
+			{
+				if(i == 3)
+					kb_type.setLocation(500, 618);
 			}
 		}
 	}

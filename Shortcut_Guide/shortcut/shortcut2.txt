@@ -1,0 +1,813 @@
+Shift+Alt+3
+Shift+Alt+4
+Ctrl+\, Ctrl+N
+Ins
+B
+I
+O
+Ctrl+Shift+K
+Ctrl+E, C
+Del
+F2
+F12
+Shift+F6
+Ctrl+Shift+B
+F6
+Ctrl+Break
+Ctrl+F7
+Alt+F11
+Num -
+Num +
+Alt+Enter
+Ctrl+K, Ctrl+G
+Shift+Alt+U
+Ctrl+Shift+,
+Ctrl+Shift+.
+Ctrl+Shift+Alt+,
+Ctrl+Shift+Alt+.
+Ctrl+Alt+N
+Shift+Alt+PgDn
+Shift+Alt+PgDn
+Alt+F10
+Ctrl+Alt+V, A
+Ctrl+D, A
+Ctrl+D, Ctrl+A
+Ctrl+Alt+Break
+Ctrl+B
+Ctrl+D, N
+Ctrl+D, Ctrl+N
+Ctrl+Alt+B
+Ctrl+D, B
+Ctrl+D, Ctrl+B
+Ctrl+Alt+C
+Ctrl+D, C
+Ctrl+D, Ctrl+C
+Ctrl+Shift+F9
+Alt+F2
+Ctrl+Alt+D
+Ctrl+Alt+V, D
+Ctrl+F9
+Ctrl+Alt+E
+Ctrl+D, E
+Ctrl+D, Ctrl+E
+Ctrl+Shift+F11
+Ctrl+F12
+Alt+F5
+Shift+Alt+Down Arrow
+Shift+Alt+Left Arrow
+Shift+Alt+Right Arrow
+Shift+Alt+Up Arrow
+Shift+Alt+0
+Shift+Alt+=
+Shift+Alt+-
+Ctrl+Alt+I
+Ctrl+D, I
+Ctrl+D, Ctrl+I
+Ctrl+Alt+Y, T
+Ctrl+Alt+Y, F
+Ctrl+Alt+V, C
+Ctrl+Alt+V, L
+Ctrl+D, L
+Ctrl+D, Ctrl+L
+Ctrl+5
+Ctrl+7
+Ctrl+6
+Ctrl+8
+Ctrl+9
+Ctrl+Alt+M, 1
+Ctrl+D, Y
+Ctrl+D, Ctrl+Y
+Ctrl+Alt+M, 2
+Ctrl+Alt+M, 3
+Ctrl+Alt+M, 4
+Ctrl+Alt+U
+Ctrl+D, M
+Ctrl+D, Ctrl+M
+Ctrl+Shift+D, S
+Ctrl+Shift+D, 1
+Ctrl+Shift+D, 2
+Ctrl+Shift+D, 3
+Ctrl+Shift+D, 4
+Ctrl+Alt+Z
+Ctrl+D, P
+Ctrl+D, Ctrl+P
+Shift+F9
+Ctrl+Alt+Q
+Ctrl+D, Q
+Ctrl+D, Ctrl+Q
+Ctrl+Shift+R
+Ctrl+Alt+G
+Ctrl+D, R
+Ctrl+D, Ctrl+R
+Ctrl+Shift+F5
+Ctrl+F10
+Ctrl+Shift+F10
+Ctrl+Shift+`
+Alt+Num *
+F5
+Alt+F1
+Ctrl+F5
+F11
+Ctrl+Alt+F11
+Shift+Alt+F11
+Shift+F11
+Ctrl+Shift+Alt+F11
+F10
+Ctrl+Alt+F10
+Shift+F5
+Shift+Alt+F2
+Ctrl+Shift+D, K
+Ctrl+D, K
+Ctrl+D, Ctrl+K
+Ctrl+Alt+H
+Ctrl+D, T
+Ctrl+D, Ctrl+T
+F9
+Ctrl+F11
+Ctrl+D, D
+Ctrl+D, Ctrl+D
+Ctrl+Alt+W, 1
+Ctrl+D, W
+Ctrl+D, Ctrl+W
+Ctrl+Alt+W, 2
+Ctrl+Alt+W, 3
+Ctrl+Alt+W, 4
+Alt+F9, D
+Alt+F9, A
+Alt+F9, S
+Ctrl+0
+F9
+Ctrl+Alt+=
+Ctrl+Alt+-
+Ctrl+Alt+F2
+Ctrl+\, Ctrl+Space
+Ctrl+\, Ctrl+1
+Ctrl+\, Ctrl+3
+F8
+Shift+F8
+Ctrl+\, Ctrl+4
+Ctrl+\, Ctrl+2
+Ctrl+\, Ctrl+Tab
+Ctrl+\, Ctrl+Down Arrow
+F5
+Ctrl+B
+Ctrl+Shift+I
+Enter
+Shift+Enter
+Left Arrow
+Shift+Left Arrow
+Shift+Alt+Left Arrow
+Right Arrow
+Shift+Right Arrow
+Shift+Alt+Right Arrow
+Ctrl+T
+Ctrl+B, C
+Ctrl+B, Ctrl+C
+Ctrl+M, Ctrl+A
+Ctrl+M, Ctrl+S
+Ctrl+M, Ctrl+T
+Ctrl+M, Ctrl+O
+Ctrl+M, O
+Ctrl+K, Ctrl+C
+Ctrl+E, C
+Ctrl+E, Ctrl+C
+Ctrl+Space
+Alt+Right Arrow
+Ctrl+K, W
+Ctrl+K, Ctrl+W
+Ctrl+C
+Ctrl+Ins
+Ctrl+Shift+Alt+C
+Shift+Alt+C
+Ctrl+X
+Shift+Del
+Ctrl+Shift+V
+Ctrl+Shift+Ins
+Alt+,
+Del
+Ctrl+Del
+Shift+Del
+Bkspce
+Shift+Bkspce
+Shift+Del
+Ctrl+K, Ctrl+\
+Ctrl+E, \
+Ctrl+E, Ctrl+\
+Ctrl+End
+End
+Ctrl+Shift+End
+Shift+End
+Ctrl+Home
+Home
+Ctrl+Shift+Home
+Shift+Home
+F2
+Ctrl+B, E
+Ctrl+B, Ctrl+E
+Ctrl+M, Ctrl+X
+Shift+Alt+B
+Ctrl+M, Ctrl+E
+Ctrl+F
+Ctrl+K, R
+Ctrl+K, Ctrl+R
+Shift+F12
+Ctrl+Shift+F
+F3
+Ctrl+F3
+Shift+F3
+Ctrl+Shift+F3
+Ctrl+K, Ctrl+D
+Ctrl+E, D
+Ctrl+E, Ctrl+D
+Ctrl+K, Ctrl+F
+Ctrl+E, F
+Ctrl+E, Ctrl+F
+Ctrl+K, M
+Ctrl+K, Ctrl+M
+Ctrl+G
+Ctrl+]
+Ctrl+Shift+]
+Ctrl+F12
+F12
+Ctrl+/
+F8
+Shift+F8
+Ctrl+M, Ctrl+H
+Alt+.
+Ctrl+I
+Shift+Alt+Right Arrow
+Ctrl+K, Ctrl+X
+Ctrl+K, X
+Tab
+Ctrl+L
+Ctrl+Shift+L
+Down Arrow
+Shift+Down Arrow
+Shift+Up Arrow
+Shift+Alt+Down Arrow
+End
+Shift+End
+Shift+Alt+End
+Ctrl+Enter
+Ctrl+Shift+Enter
+Home
+Shift+Home
+Shift+Alt+Home
+Shift+Alt+T
+Up Arrow
+Shift+Up Arrow
+Shift+Down Arrow
+Shift+Alt+Up Arrow
+Ctrl+J
+Ctrl+K, L
+Ctrl+K, Ctrl+L
+Ctrl+U
+Ctrl+Shift+U
+Ctrl+Down Arrow
+Down Arrow
+Down Arrow
+Ctrl+Left Arrow
+Left Arrow
+Left Arrow
+Ctrl+Right Arrow
+Right Arrow
+Right Arrow
+Ctrl+Up Arrow
+Up Arrow
+Up Arrow
+Alt+Down Arrow
+Alt+Up Arrow
+Ctrl+,
+Shift+Alt+L
+Ins
+Ins
+Ctrl+K, Ctrl+N
+Ctrl+B, N
+Ctrl+B, Ctrl+N
+Ctrl+Shift+Down Arrow
+Ctrl+W
+Ctrl+Shift+G
+Shift+Alt+Left Arrow
+Ins
+PgDn
+Shift+PgDn
+PgUp
+Shift+PgUp
+Ctrl+Shift+Space
+Ctrl+K, P
+Ctrl+K, Ctrl+P
+Ctrl+V
+Shift+Ins
+Ctrl+Shift+Alt+P
+Ctrl+Alt+-
+Alt+F12
+Ctrl+Alt+=
+Ctrl+K, Ctrl+P
+Ctrl+B, P
+Ctrl+B, Ctrl+P
+Ctrl+Shift+Up Arrow
+Shift+Alt+F12
+Ctrl+K, Ctrl+I
+Ctrl+K, I
+Ctrl+Y
+Ctrl+Shift+Z
+Shift+Alt+Bkspce
+Ctrl+Shift+J
+F5
+Del
+Del
+Ctrl+Del
+Ctrl+H
+Ctrl+Shift+H
+Ctrl+Shift+I
+Ctrl+Left Arrow
+Ctrl+Right Arrow
+Ctrl+Down Arrow
+Ctrl+Up Arrow
+Ctrl+A
+Ctrl+Shift+W
+Esc
+Tab
+Shift+Tab
+Ctrl+=
+Alt+`
+Enter
+Ctrl+Shift+Down Arrow
+Shift+Down Arrow
+Shift+Down Arrow
+Ctrl+Shift+Left Arrow
+Shift+Left Arrow
+Shift+Left Arrow
+Ctrl+Shift+Right Arrow
+Shift+Right Arrow
+Shift+Right Arrow
+Ctrl+Shift+Up Arrow
+Shift+Up Arrow
+Shift+Up Arrow
+Ctrl+M, Ctrl+U
+Ctrl+M, Ctrl+P
+Ctrl+M, P
+Alt+F3, S
+Ctrl+K, Ctrl+S
+Ctrl+K, S
+Ctrl+K, Ctrl+A
+Ctrl+E, A
+Ctrl+E, Ctrl+A
+Shift+Tab
+Ctrl+M, Ctrl+L
+Ctrl+M, L
+Ctrl+K, Ctrl+K
+Ctrl+B, T
+Ctrl+B, Ctrl+T
+Ctrl+Alt+Space
+Ctrl+M, Ctrl+M
+Ctrl+M, M
+Ctrl+K, Ctrl+H
+Ctrl+E, T
+Ctrl+E, Ctrl+T
+Ctrl+E, Ctrl+W
+Ctrl+E, W
+Ctrl+K, Ctrl+U
+Ctrl+E, U
+Ctrl+E, Ctrl+U
+Ctrl+Z
+Alt+Bkspce
+Ctrl+PgDn
+Ctrl+Shift+PgDn
+Ctrl+PgUp
+Ctrl+Shift+PgUp
+Ctrl+R, Ctrl+W
+Ctrl+E, S
+Ctrl+E, Ctrl+S
+Ctrl+Del
+Ctrl+Bkspce
+Ctrl+Right Arrow
+Ctrl+Shift+Right Arrow
+Ctrl+Shift+Alt+Right Arrow
+Ctrl+Left Arrow
+Ctrl+Shift+Left Arrow
+Ctrl+Shift+Alt+Left Arrow
+Ctrl+Shift+T
+Ctrl+Shift+K
+Alt+F9, L
+Ctrl+`
+Ctrl+Shift+P
+Ctrl+Alt+F5
+Alt+Enter
+Alt+'
+Ctrl+M, Ctrl+G
+Ctrl+K, Ctrl+O
+Ctrl+K, Ctrl+T
+Ctrl+K, T
+Alt+F4
+Ctrl+N
+Ctrl+Shift+N
+Shift+Alt+N
+Ctrl+O
+Ctrl+Shift+O
+Shift+Alt+O
+Ctrl+P
+F2
+Ctrl+Shift+S
+Ctrl+S
+Ctrl+Shift+Down Arrow
+Shift+F9
+Ctrl+Shift+Left Arrow
+F9
+Ctrl+Shift+Right Arrow
+Ctrl+Shift+Up Arrow
+Ctrl+B
+Ctrl+B
+Ctrl+R
+Ctrl+Shift+F9
+Ctrl+F9
+Ctrl+M
+Ctrl+L
+F2
+Ctrl+Shift+L
+Ctrl+I
+Ctrl+Shift+R
+Shift+F7
+Alt+Right Arrow
+Alt+Left Arrow
+Alt+Up Arrow
+Alt+Down Arrow
+Ctrl+D
+Ctrl+T
+Ctrl+G
+Ctrl+U
+Alt+Up Arrow
+Alt+Right Arrow
+Alt+Left Arrow
+Alt+Down Arrow
+Ctrl+Alt+F1
+Ctrl+F1, M
+Ctrl+F1, Ctrl+M
+F1
+Ctrl+F1, V
+Ctrl+F1, Ctrl+V
+Shift+F1
+Ctrl+A
+Ctrl+B
+Ctrl+Shift+U
+Ctrl+J
+Alt+P
+Ctrl+Shift+I
+Ctrl+Shift+Alt+P
+Ctrl+Shift+Alt+R
+Ctrl+Shift+Alt+W
+Ctrl+F
+Ctrl+H
+Shift+Alt+H
+Ctrl+=
+Ctrl+L
+Ctrl+M
+Ctrl+Shift+M
+Ins
+Ctrl+]
+Ctrl+Right Arrow
+Ctrl+Shift+]
+Ctrl+Shift+Right Arrow
+Shift+Alt+P
+Shift+Alt+R
+Shift+Alt+W
+Ctrl+I
+Ctrl+[
+Ctrl+Left Arrow
+Ctrl+Shift+[
+Ctrl+Shift+Left Arrow
+Shift+Alt+S
+Alt+R
+Ctrl+Shift+H
+Alt+W
+Ctrl+Alt+S
+Ctrl+Shift+Alt+S
+Ctrl+.
+Ctrl+-
+Ctrl+T
+Ctrl+U
+Ctrl+Shift+.
+Ctrl+Up Arrow
+Ctrl+Shift+,
+Ctrl+Down Arrow
+Ctrl+R, Q
+Ins
+Ctrl+L
+Ctrl+Break
+Del
+Ctrl+M, Ctrl+G
+Ctrl+K, Ctrl+G
+Ins
+Alt+Down Arrow
+Alt+PgDn
+Alt+End
+Alt+Home
+Alt+Up Arrow
+Alt+PgUp
+Ctrl+R, R
+Shift+Del
+Ctrl+1
+Ctrl+C
+Ctrl+Alt+D
+Shift+Alt+L
+Ctrl+Shift+L
+Ctrl+Alt+C
+Ctrl+Shift+T
+F12
+Shift+Alt+C
+Ctrl+M, Ctrl+C
+Shift+Alt+A
+Ctrl+Shift+A
+Ctrl+Shift+X
+Ctrl+Alt+Ins
+Alt+;, Alt+C
+Alt+;, Alt+P
+Alt+;, Alt+R
+Alt+Down Arrow
+Alt+Up Arrow
+Ctrl+T
+Ctrl+2
+Ctrl+1
+Ctrl+R
+Ctrl+G
+Ctrl+Shift+J
+Ctrl+4
+Ctrl+3
+Ctrl+R, Ctrl+E
+Ctrl+R, E
+Ctrl+R, Ctrl+I
+Ctrl+R, I
+Ctrl+R, Ctrl+M
+Ctrl+R, M
+Ctrl+R, Ctrl+V
+Ctrl+R, V
+Ctrl+R, Ctrl+R
+Ctrl+R, R
+F2
+Ctrl+R, Ctrl+O
+Ctrl+R, O
+Ctrl+4
+Ctrl+5
+Ctrl+3
+Ctrl+2
+Ctrl+6
+Ctrl+1
+Ctrl+[, O
+Ctrl+[, Ctrl+O
+Ctrl+[, P
+Ctrl+[, Ctrl+P
+Ctrl+[, S
+Ctrl+[, Ctrl+S
+Alt+F5
+Ctrl+R, E
+Ctrl+R, Ctrl+E
+Ctrl+R, Q
+Ctrl+R, Ctrl+Q
+Ctrl+R, M
+Ctrl+R, Ctrl+M
+Alt+End
+Shift+Alt+R
+Alt+Break
+Ctrl+R, R
+F2
+Ctrl+R, Ctrl+R
+Shift+Alt+C
+Shift+Alt+G
+Shift+Alt+.
+Shift+Alt+,
+Alt+Break
+Shift+Alt+U
+Alt+Break
+Ctrl+Shift+E
+Ctrl+D, F
+Ctrl+D, G
+Ctrl+D, T
+Ctrl+D, E
+Ctrl+D, A
+Ctrl+D, R
+Ctrl+Alt+Left Arrow
+Ctrl+Alt+Right Arrow
+Ctrl+Alt+Up Arrow
+Ctrl+Alt+Down Arrow
+Ctrl+0, Ctrl+N
+Ctrl+0, N
+Ctrl+0, Ctrl+G
+Ctrl+0, G
+Ctrl+0, Ctrl+O
+Ctrl+0, O
+Shift+Alt+N
+Shift+Alt+P
+Shift+Alt+L
+F5
+Ctrl+'
+Alt+PgDn
+Alt+PgUp
+Ctrl+0, Ctrl+B
+Ctrl+0, B
+Ctrl+0, Ctrl+C
+Ctrl+0, C
+Ctrl+0, Ctrl+D
+Ctrl+0, D
+Ctrl+0, Ctrl+H
+Ctrl+0, H
+Ctrl+0, Ctrl+M
+Ctrl+0, M
+Ctrl+0, Ctrl+P
+Ctrl+0, P
+Ctrl+0, Ctrl+R
+Ctrl+0, R
+Ctrl+0, Ctrl+S
+Ctrl+0, S
+Alt+Home
+Alt+Down Arrow
+Alt+0
+Alt+Up Arrow
+Alt+1
+Alt+2
+Alt+3
+Alt+4
+Alt+5
+Alt+6
+Alt+7
+Alt+8
+Alt+9
+Ctrl+0, Ctrl+A
+Ctrl+0, A
+Ctrl+0, Ctrl+W
+Ctrl+0, W
+Alt+Left Arrow
+Alt+Right Arrow
+Alt+1
+Alt+2
+Alt+3
+Shift+Alt+C
+Shift+Alt+L
+Ctrl+\, Ctrl+C
+Ctrl+\, Ctrl+A
+Ctrl+R, Ctrl+A
+Ctrl+R, Ctrl+T
+F12
+Ctrl+R, L
+Ctrl+R, A
+Ctrl+R, T
+Ctrl+Alt+P
+Ctrl+K, Ctrl+B
+Ctrl+Shift+Alt+F12, Ctrl+Shift+Alt+F12
+Shift+Alt+M
+Ctrl+\, Ctrl+R
+Ctrl+Shift+N
+Alt+Left Arrow
+Ctrl+K, Ctrl+W
+Ctrl+W, B
+Ctrl+W, Ctrl+B
+Ctrl+Shift+1
+Ctrl+Shift+2
+Ctrl+W, K
+Ctrl+W, Ctrl+K
+Ctrl+Shift+C
+Ctrl+W, C
+Ctrl+W, Ctrl+C
+Ctrl+K, Ctrl+V
+Ctrl+\, D
+Ctrl+\, Ctrl+D
+Ctrl+W, D
+Ctrl+W, Ctrl+D
+Ctrl+Alt+A
+Ctrl+W, A
+Ctrl+W, Ctrl+A
+Shift+Alt+D
+Ctrl+Alt+T
+Ctrl+W, U
+Ctrl+W, Ctrl+U
+F2
+Ctrl+M, Ctrl+M
+Ctrl+1
+Ctrl+2
+Ctrl+\, E
+Ctrl+\, Ctrl+E
+Ctrl+W, E
+Ctrl+W, Ctrl+E
+Ctrl+Alt+F
+Ctrl+Alt+F12
+Ctrl+W, Q
+Ctrl+W, Ctrl+Q
+Alt+Right Arrow
+Ctrl+Shift+7
+Shift+Alt+Enter
+Ctrl+-
+Ctrl+Shift+-
+Ctrl+Shift+F12
+Ctrl+PgDn
+Ctrl+W, N
+Ctrl+W, Ctrl+N
+Ctrl+Alt+J
+Ctrl+W, J
+Ctrl+W, Ctrl+J
+Ctrl+Alt+O
+Ctrl+W, O
+Ctrl+W, Ctrl+O
+Ctrl+W, G
+Ctrl+W, Ctrl+G
+Ctrl+Shift+8
+F4
+Ctrl+W, P
+Ctrl+W, Ctrl+P
+Shift+F4
+F5
+Ctrl+Alt+D
+Ctrl+Shift+E
+Ctrl+W, R
+Ctrl+W, Ctrl+R
+Ctrl+Alt+S
+Ctrl+W, L
+Ctrl+W, Ctrl+L
+Shift+Alt+F10
+Ctrl+.
+Ctrl+Alt+L
+Ctrl+W, S
+Ctrl+W, Ctrl+S
+Ctrl+\, Ctrl+S
+Ctrl+Shift+Y
+Ctrl+\, T
+Ctrl+\, Ctrl+T
+Ctrl+W, T
+Ctrl+W, Ctrl+T
+Ctrl+\, Ctrl+M
+Ctrl+Alt+X
+Ctrl+W, X
+Ctrl+W, Ctrl+X
+Ctrl+\, Ctrl+U
+Enter
+F7
+Shift+F7
+Shift+F7
+Ctrl+Alt+R
+Ctrl+W, W
+Ctrl+W, Ctrl+W
+Ctrl+Shift+.
+Ctrl+Shift+,
+Esc
+Ctrl+Q
+Ctrl+Shift+Q
+Ctrl+;
+Alt+`
+Ctrl+Shift+Alt+Space
+Ctrl+F4
+Shift+Esc
+Ctrl+Alt+Home
+Ctrl+F2
+Ctrl+F6
+Ctrl+Tab
+Alt+F6
+Ctrl+Alt+PgDn
+Ctrl+PgDn
+Ctrl+Shift+Alt+PgDn
+Alt+F7
+Ctrl+Shift+F6
+Ctrl+Shift+Tab
+Shift+Alt+F6
+Ctrl+Alt+PgUp
+Ctrl+PgUp
+Ctrl+Shift+Alt+PgUp
+Shift+Alt+F7
+Alt+-
+Ctrl+Alt+Down Arrow
+Shift+Alt+V
+Ctrl+Num *, Ctrl+R
+Ctrl+Num *, Ctrl+D
+Ctrl+E, Ctrl+C
+Ctrl+E, C
+Ctrl+E, Ctrl+Y
+Ctrl+E, Y
+Ctrl+E, Ctrl+F
+Ctrl+E, F
+Ctrl+E, Ctrl+N
+Ctrl+E, N
+Ctrl+E, Ctrl+X
+Ctrl+E, X
+Ctrl+E, Ctrl+E
+Ctrl+E, E
+Ctrl+E, Ctrl+P
+Ctrl+E, P
+Ctrl+E, Ctrl+M
+Ctrl+E, M
+Ctrl+Alt+F6
+Ctrl+E, Ctrl+R
+Ctrl+E, R
+Ctrl+E, Ctrl+A
+Ctrl+E, A
+Ctrl+E, Ctrl+I
+Ctrl+E, I
+Ctrl+E, Ctrl+O
+Ctrl+E, O
+Ctrl+E, Ctrl+V
+Ctrl+E, V
+Ctrl+E, Ctrl+S
+Ctrl+E, S
+Ctrl+Num +
+Ctrl+Num -
+Alt+F5
+Ctrl+Alt+F5
+Ctrl+2
+Ctrl+3
+Ctrl+1

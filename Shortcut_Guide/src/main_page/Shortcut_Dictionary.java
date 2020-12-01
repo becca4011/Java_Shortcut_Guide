@@ -347,8 +347,8 @@ public class Shortcut_Dictionary extends JPanel
 			home_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e)
 				{
+					// 돌아가기 버튼을 누르면 linkedlist의 모든 값을 삭제하고, 메인으로 이동하고, 보이지 않게 함
 					sc.clear();
-					// 돌아가기 버튼을 누르면 메인으로 이동하고, 보이지 않게 함
 				    mf.change("BackToMain", null); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
 					setVisible(false);
 				}
@@ -405,7 +405,8 @@ public class Shortcut_Dictionary extends JPanel
 			setUndecorated(true); // 타이틀바 삭제
 			
 			setSize(350, 200);
-			setLocation(getWidth() / 2 + 210 + mf.getLocation().x, getHeight() / 2 + 120 + mf.getLocation().y); // 다이얼로그를 화면의 중앙에 띄우도록 함
+			// 다이얼로그를 화면의 중앙에 띄우도록 함
+			setLocation(getWidth() / 2 + 210 + mf.getLocation().x, getHeight() / 2 + 120 + mf.getLocation().y);
 			
 			// 키를 입력받기 위해 포커스 설정
 			background.setFocusable(true);
