@@ -1,10 +1,6 @@
 package crawling;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
