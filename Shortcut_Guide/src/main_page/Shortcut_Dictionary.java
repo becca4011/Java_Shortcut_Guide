@@ -39,6 +39,7 @@ public class Shortcut_Dictionary extends JPanel
 		
 		try
 		{
+			sc.clear();
 			// 파일을 한 줄씩 읽어옴
 			File read = new File("shortcut/shortcut.txt");
 			FileReader fr = new FileReader(read);
@@ -347,8 +348,7 @@ public class Shortcut_Dictionary extends JPanel
 			home_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e)
 				{
-					// 돌아가기 버튼을 누르면 linkedlist의 모든 값을 삭제하고, 메인으로 이동하고, 보이지 않게 함
-					sc.clear();
+					// 돌아가기 버튼을 누르면 메인으로 이동하고, 보이지 않게 함
 				    mf.change("BackToMain", null); // MainFrame에 있는 change 함수를 사용하여 Mainpg Panel로 이동
 					setVisible(false);
 				}
