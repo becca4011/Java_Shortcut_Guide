@@ -21,8 +21,8 @@ public class Shortcut_Search extends JPanel
 	private String key2[] = {"`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Bkspce", "Home"};
 	private String key3[] = {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\", "PgUp"};
 	private String key4[] = {"Caps Lock", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter", "PgDn"};
-	private String key5[] = {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift", "End"};
-	private String key6[] = {"Ctrl", "Win", "Alt", "Space", "Alt", "Ctrl", "Left Arrow", "Up Arrow", "Down Arrow", "Right Arrow"};
+	private String key5[] = {"Shift1", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift2", "End"};
+	private String key6[] = {"Ctrl", "Alt", "Space", "Left Arrow", "Up Arrow", "Down Arrow", "Right Arrow"};
 
 	ImageIcon sc_bg, sc_kb, sc_kb_tp; // 배경, 키보드, 키입력 위치 표시
 	ImageIcon sc_sh, sc_shroll; // 검색 아이콘
@@ -211,9 +211,9 @@ public class Shortcut_Search extends JPanel
 				search.setText(search.getText() + "Space");
 				s = "Space";
 				e.consume();
-			}
-			
-			if(s == null)
+			}			
+
+			if(s == null && e.getKeyChar() != '')
 				s = Character.toString(e.getKeyChar());
 			if(s != null)
 				KeyTypedImage(s);
@@ -257,7 +257,10 @@ public class Shortcut_Search extends JPanel
 				break;
 			case KeyEvent.VK_SHIFT:
 				search.setText(search.getText() + "Shift");
-				s = "Shift";
+				if(e.getKeyLocation() == KeyEvent.KEY_LOCATION_LEFT) // shift를 누른 위치가 왼쪽일 경우
+					s = "Shift1";
+				else // shift를 누른 위치가 오른쪽일 경우
+					s = "Shift2";
 				break;
 			case KeyEvent.VK_INSERT:
 				search.setText(search.getText() + "Ins");
@@ -298,10 +301,6 @@ public class Shortcut_Search extends JPanel
 			case KeyEvent.VK_RIGHT:
 				search.setText(search.getText() + "Right Arrow");
 				s = "Right Arrow";
-				break;
-			case KeyEvent.VK_ESCAPE:
-				search.setText(search.getText() + "Esc");
-				s = "Esc";
 				break;
 			case KeyEvent.VK_F1:
 				search.setText(search.getText() + "F1");
@@ -351,10 +350,8 @@ public class Shortcut_Search extends JPanel
 				search.setText(search.getText() + "F12");
 				s = "F12";
 				break;
-			case KeyEvent.VK_CAPS_LOCK:
-				search.setText(search.getText() + "Caps Lock");
-				s = "Caps Lock";
-				break;
+			default:
+				s = null;
 			}
 			
 			if(s != null)
@@ -394,7 +391,7 @@ public class Shortcut_Search extends JPanel
 				if (i == 0)
 					kb_type.setLocation(56, 420);
 				else
-					kb_type.setLocation(i * 68 + 68, 420);
+					kb_type.setLocation(i * 68 + 70, 420);
 			}
 		}
 		
@@ -420,7 +417,7 @@ public class Shortcut_Search extends JPanel
 				if (i == 0)
 					kb_type.setLocation(70, 552);
 				else if (i == key5.length - 2)
-					kb_type.setLocation(930, 552);
+					kb_type.setLocation(910, 552);
 				else if (i == key5.length - 1)
 					kb_type.setLocation(1022, 552);
 				else
@@ -432,8 +429,20 @@ public class Shortcut_Search extends JPanel
 		{
 			if(st.equals(key6[i]))
 			{
-				if(i == 3)
+				if (i == 0) // Ctrl
+					kb_type.setLocation(50, 618);
+				if (i == 1) // Alt
+					kb_type.setLocation(265, 618);
+				if (i == 2) // Space
 					kb_type.setLocation(500, 618);
+				if (i == 3) // Left Arrow
+					kb_type.setLocation(886, 618);
+				if (i == 4) // Up Arrow
+					kb_type.setLocation(954, 600);
+				if (i == 5) // Down Arrow
+					kb_type.setLocation(954, 634);
+				if (i == 6) // Right Arrow
+					kb_type.setLocation(1022, 618);
 			}
 		}
 	}
