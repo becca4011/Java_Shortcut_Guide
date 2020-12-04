@@ -40,10 +40,10 @@ public class MainFrame extends JFrame
             s_dict.requestFocusInWindow(); // 단축키 사전 패널에 포커스 강제 설정
             break;
             
-        case "Search": // 메인에서 프로필 패널로 이동시
-            s_srh = new Shortcut_Search(this); // 프로필 패널 생성(현재 JFrame 정보 전달)
-            getContentPane().add(s_srh); // 프로필 패널 추가
-            s_srh.requestFocusInWindow(); // 프로필 패널에 포커스 강제 설정
+        case "Search": // 메인에서 단축키 검색 패널로 이동시
+            s_srh = new Shortcut_Search(this); // 단축키 검색 패널 생성(현재 JFrame 정보 전달)
+            getContentPane().add(s_srh); // 단축키 검색 패널 추가
+            s_srh.requestFocusInWindow(); // 단축키 검색 패널에 포커스 강제 설정
             break;
         }
         revalidate(); // 프레임 새로고침

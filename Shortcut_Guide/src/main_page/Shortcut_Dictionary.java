@@ -1,8 +1,6 @@
 package main_page;
 
 import javax.swing.*;
-import javax.xml.crypto.dsig.keyinfo.PGPData;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
